@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KHEM | Proyectos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Specific Styles for Proyectos Page */
+        .process-section {
+            padding: 5rem 2rem;
+            background: #080808;
+            border-bottom: 1px solid #111;
+        }
+
+        .process-steps {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            gap: 4rem;
+        }
+
+        .step {
+            border-left: 2px solid var(--gold-dim);
+            padding-left: 2rem;
+        }
+
+        .step h3 {
+            font-family: var(--font-heading);
+            color: #fff;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .step p {
+            color: #ccc;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .step-list {
+            list-style: none;
+            margin-left: 0;
+            margin-bottom: 1rem;
+        }
+
+        .step-list li {
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .step-list li::before {
+            content: '•';
+            margin-right: 0.5rem;
+            color: #fff;
+        }
+
+        /* PROJECT DETAIL */
+        .project-detail {
+            padding: 5rem 2rem;
+            background: #050505;
+        }
+
+        .project-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .project-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        .project-subtitle {
+            font-size: 1.2rem;
+            color: #fff;
+            letter-spacing: 0.1em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .project-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: start;
+        }
+
+        .project-text h4 {
+            font-family: var(--font-heading);
+            color: #fff;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid #333;
+            display: inline-block;
+        }
+
+        .project-text p {
+            color: #aaa;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .project-media {
+            background: #111;
+            padding: 1rem;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #222;
+        }
+
+        .project-meta {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #222;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .project-meta p {
+            margin-bottom: 0.3rem;
+        }
+
+        .project-meta strong {
+            color: #999;
+        }
+
+        .placeholder-video {
+            width: 100%;
+            height: 300px;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            border: 1px dashed #333;
+        }
+
+        @media(max-width:768px) {
+            .project-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav class="top-nav" style="position: relative; background: #050505;">
+        <div class="nav-left">
+            <span class="brand-name">KHEM</span>
+            <span class="brand-sub">IMAGEN & SONIDO</span>
+        </div>
+        <div class="nav-right">
+            <a href="index.html#concepto">Concepto</a>
+            <a href="index.html#identidad">Identidad</a>
+            <a href="proyectos.html" style="color:var(--gold);">Proyectos</a>
+            <a href="index.html#artefactos">Artefactos</a>
+            <a href="index.html#contacto">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- PROCESS SECTION -->
+    <section class="process-section">
+        <div class="container">
+            <h2 class="section-title">CÓMO SE CONSTRUYEN</h2>
+            <div class="process-steps">
+                <p
+                    style="text-align: center; color: #fff; margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    Los proyectos en KHEM se desarrollan a través de un proceso estructurado, flexible y coherente,
+                    donde la improvisación, la casualidad y distintos marcos mentales son fundamentales, y donde sonido
+                    e imagen convergen en el arte final.
+                </p>
+
+                <div class="step">
+                    <h3>Preproducción</h3>
+                    <p>En esta fase se define un punto de partida, no un resultado cerrado. Aquí se trabaja:</p>
+                    <ul class="step-list">
+                        <li>La idea o concepto inicial</li>
+                        <li>La atmósfera y la intención</li>
+                        <li>Un primer enfoque sonoro y visual</li>
+                        <li>El formato más adecuado en ese momento</li>
+                    </ul>
+                    <p>La preproducción marca una dirección, sabiendo que puede cambiar.</p>
+                </div>
+
+                <div class="step">
+                    <h3>Arreglos y edición</h3>
+                    <p>En esta etapa, los elementos comienzan a tomar forma y también a transformarse. Se desarrollan y
+                        ajustan:</p>
+                    <ul class="step-list">
+                        <li>Las estructuras sonoras</li>
+                        <li>Los arreglos y el ritmo interno de la pieza</li>
+                        <li>Decisiones visuales y narrativas que surgen durante el proceso</li>
+                    </ul>
+                    <p>Sonido e imagen se prueban, se desvían y se reajustan, hasta encontrar un equilibrio que no
+                        siempre estaba previsto.</p>
+                </div>
+
+                <div class="step">
+                    <h3>Producción y arte final</h3>
+                    <p>En la fase final, todos los elementos se integran. Aquí se realiza la producción definitiva del
+                        sonido, la edición y cierre visual, y el ajuste fino entre imagen y audio.</p>
+                    <p>El objetivo no es corregir lo inesperado, sino integrarlo cuando aporta sentido.</p>
+                </div>
+
+                <div class="step">
+                    <h3>Cierre</h3>
+                    <p>Cada proyecto encuentra su forma a través del proceso, entre lo pensado y lo que ocurre.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECT DETAIL: The Boy -->
+    <section class="project-detail">
+        <div class="container">
+            <div class="project-header">
+                <h2 class="section-title" data-text="KHEM PROYECTO">PROYECTO DESTACADO</h2>
+                <h1 class="project-title">THE BOY OF MERRY CHRISTMAS FEEL SONG</h1>
+                <p class="project-subtitle">“NO LO VAS A CREER: Los sueños de un niño que van a cambiarlo todo…”</p>
+            </div>
+
+            <div class="project-content">
+                <div class="project-text">
+                    <h4>Introducción</h4>
+                    <p>Este proyecto se presenta como un videoclip musical que combina narrativa visual y canción
+                        original para construir una historia emocional ligada a la infancia, los sueños y el cambio. Una
+                        pieza navideña contemporánea que utiliza el lenguaje audiovisual para ir más allá del formato
+                        clásico del videoclip.</p>
+
+                    <h4>El Origen</h4>
+                    <p>El proyecto nace de la idea de mirar la Navidad desde los ojos de un niño. No como una
+                        celebración superficial, sino como un momento de transformación interior, donde los sueños
+                        empiezan a tomar forma.</p>
+                    <p>La historia parte de una emoción sencilla y universal, desarrollada a través de una narrativa
+                        accesible y directa.</p>
+
+                    <h4>La Música</h4>
+                    <p>La canción es una pieza pop moderna navideña, cantada en inglés, con un enfoque actual y
+                        emocional. El uso del idioma forma parte natural del proyecto, reforzando su vocación abierta y
+                        universal.</p>
+
+                    <h4>El Proceso</h4>
+                    <p>El proyecto nace a partir de la composición y creación de la canción, que actúa como punto de
+                        partida conceptual y emocional. A partir de ahí se desarrolla el videoclip, construido
+                        íntegramente con imágenes generadas por IA, basadas en fotografías creadas previamente bajo la
+                        premisa de un guión narrativo definido.</p>
+                    <p>La IA se integra como una herramienta creativa más, al servicio de la idea, la imaginación y el
+                        proceso.</p>
+
+                    <h4>Lo que queda abierto</h4>
+                    <p>Este proyecto no busca imponer un mensaje cerrado. La historia y la música dejan espacio para que
+                        cada espectador conecte desde su propia experiencia.</p>
+
+                    <div class="project-meta">
+                        <p><strong>Formato:</strong> Videoclip</p>
+                        <p><strong>Audio:</strong> Canción original</p>
+                        <p><strong>Idioma:</strong> Inglés</p>
+                        <p><strong>Estado:</strong> Terminado y publicado</p>
+                    </div>
+                </div>
+
+                <div class="project-media">
+                    <!-- Local HTML5 Video Player -->
+                    <div class="video-container" style="width: 100%; border: 1px solid #222; background: #000;">
+                        <video controls controlsList="nodownload" poster="assets/CLEM musica.png"
+                            style="width: 100%; display: block;">
+                            <source src="assets/The_Boy_of_Merry_Christmas.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
+                    </div>
+                    <!-- YouTube Link -->
+                    <div class="video-links" style="margin-top: 1rem; text-align: right;">
+                        <a href="https://youtu.be/9zcAxkehCuk" target="_blank"
+                            style="color: #ccc; font-size: 0.9rem; letter-spacing: 0.1em; text-decoration: none; border-bottom: 1px solid #555; transition: all 0.3s;"
+                            onmouseover="this.style.color='#d4af37'; this.style.borderColor='#d4af37'"
+                            onmouseout="this.style.color='#ccc'; this.style.borderColor='#555'">VER EN YOUTUBE
+                            &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MINIMAL FOOTER -->
+    <footer class="conceptual-footer">
+        <div class="container">
+            <p class="closure-text">
+                KHEM · Música para imaginar<br>
+                Proyectos que nacen de una idea y dejan espacio a la imaginación.
+            </p>
+            <div class="closure-link">
+                <a href="index.html#contacto">Conocer KHEM</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
