@@ -269,9 +269,11 @@ function initBook(canvases) {
 
     try {
         if (bookContainer) {
+            // alert("Iniciando PageFlip..."); // Debug
             pageFlip = new St.PageFlip(bookContainer, settings);
 
             pageFlip.loadFromHTML(document.querySelectorAll('.my-page'));
+            // alert("Libro cargado con éxito"); // Debug
 
             // Update UI on flip
             // Update UI on flip

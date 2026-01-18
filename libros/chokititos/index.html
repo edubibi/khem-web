@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="../../css/style.css">
 
     <!-- Viewer Specific CSS (Copied from flipbook maker) -->
+    <script>
+        window.onerror = function (msg, url, line, col, error) {
+            alert("Error: " + msg + "\nEn: " + line + ":" + col);
+            return false;
+        };
+    </script>
     <style>
         body {
             height: 100vh;
