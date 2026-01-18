@@ -1,0 +1,306 @@
+:root {
+    --primary: #3b82f6;
+    --primary-hover: #2563eb;
+    --bg-dark: #1e1e1e;
+    --bg-card: #2d2d2d;
+    --text-main: #ffffff;
+    --text-muted: #a1a1aa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    /* Intellectual & Friendly: Warm Wood Table */
+    background: radial-gradient(circle at center, #8B5A2B 0%, #4A3018 100%);
+    min-height: 100vh;
+    color: #1f2937;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Upload Screen */
+.upload-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.upload-card {
+    background: var(--bg-card);
+    padding: 4rem;
+    border-radius: 1rem;
+    text-align: center;
+    border: 2px dashed #4b5563;
+    transition: all 0.3s ease;
+    max-width: 600px;
+    width: 100%;
+}
+
+.upload-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+}
+
+.icon-upload {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.upload-card h1 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.upload-card p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid var(--text-muted);
+    color: var(--text-muted);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.btn-secondary:hover {
+    border-color: white;
+    color: white;
+}
+
+/* Loader */
+#loading-screen {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--bg-card);
+    border-top: 5px solid var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Book Viewer */
+#book-viewer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.toolbar {
+    height: 60px;
+    background: var(--bg-card);
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    gap: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.toolbar button {
+    background: #404040;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.toolbar button:hover {
+    background: #505050;
+}
+
+#page-counter {
+    font-variant-numeric: tabular-nums;
+    min-width: 80px;
+    text-align: center;
+}
+
+.scene {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Create a 3D environment feeling */
+    background: radial-gradient(circle at center, #2a2a2a 0%, #111 100%);
+    padding: 60px;
+    /* More breathing room */
+    overflow: auto;
+    /* Allow scrolling if zoomed */
+}
+
+#flipbook-container {
+    /* Explicitly smaller than viewport to avoid "magnet" effect */
+    width: auto;
+    height: auto;
+    max-width: 80vw;
+    max-height: 70vh;
+    margin: auto;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    /* Lift it off the background */
+}
+
+/* The element StPageFlip attaches to doesn't need much styling logic itself, 
+   but ensuring it's centered is key */
+.stf__wrapper {
+    /* Removed heavy drop-shadow that looked like a reflection */
+    /* filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.6)); */
+}
+
+/* Bookmark Styles */
+.page-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.bookmark-flag {
+    position: absolute;
+    top: -5px;
+    right: 60px;
+    /* Moved inward to avoid page-flip corner interaction */
+    width: 40px;
+    /* Slightly wider */
+    height: 60px;
+    background-color: #3b82f6;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
+    cursor: pointer;
+    z-index: 1000;
+    /* High z-index to be clickable */
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: translateY(-90%);
+    /* Peek slightly? */
+    opacity: 0.9;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.bookmark-flag:hover {
+    transform: translateY(-10%);
+    /* Slide down on hover */
+    opacity: 1;
+}
+
+.bookmark-flag.active {
+    transform: translateY(0);
+    /* Fully visible when active */
+}
+
+/* Trigger area for easier access */
+.bookmark-trigger {
+    position: absolute;
+    top: 0;
+    right: 50px;
+    width: 60px;
+    height: 60px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.bookmark-trigger:hover+.bookmark-flag {
+    transform: translateY(-20%);
+}
+
+canvas.page-canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Side Navigation Arrows (Reel Style) */
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 8px;
+    user-select: none;
+    transition: all 0.2s ease;
+    z-index: 2000;
+    /* On top of everything */
+}
+
+.nav-arrow:hover {
+    background-color: rgba(59, 130, 246, 0.8);
+    /* Primary color */
+    transform: translateY(-50%) scale(1.1);
+}
+
+.nav-arrow.prev {
+    left: 20px;
+}
+
+.nav-arrow.next {
+    right: 30px;
+    /* Account for scrollbar if any */
+}
+
+/* Hide arrows on mobile if needed, or adjust size */
+@media (max-width: 768px) {
+    .nav-arrow {
+        width: 40px;
+        height: 60px;
+        font-size: 2rem;
+    }
+}
