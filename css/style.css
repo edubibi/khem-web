@@ -107,18 +107,6 @@ body {
     font-weight: 600;
 }
 
-.nav-right a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 0.9rem;
-    margin-left: 2rem;
-    transition: color 0.3s;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
-    font-weight: 600;
-}
-
 .nav-right a:hover {
     color: var(--gold);
 }
@@ -623,6 +611,205 @@ footer {
     }
 
     .tagline {
+        font-size: 1.5rem;
+    }
+}
+
+/* --- PROJECT SPECIFIC STYLES (Merged from Proyectos) --- */
+.process-section {
+    padding: 5rem 2rem;
+    background: #080808;
+    border-bottom: 1px solid #111;
+}
+
+.process-steps {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    gap: 4rem;
+}
+
+.step {
+    border-left: 2px solid var(--gold-dim);
+    padding-left: 2rem;
+}
+
+.step h3 {
+    font-family: var(--font-heading);
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.step p {
+    color: #ccc;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.step-list {
+    list-style: none;
+    margin-left: 0;
+    margin-bottom: 1rem;
+}
+
+.step-list li {
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.step-list li::before {
+    content: '•';
+    margin-right: 0.5rem;
+    color: #fff;
+}
+
+.project-detail {
+    padding: 5rem 2rem;
+    background: #050505;
+}
+
+.project-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.project-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+}
+
+.project-subtitle {
+    font-size: 1.2rem;
+    color: #fff;
+    letter-spacing: 0.1em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.project-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.project-text h4 {
+    font-family: var(--font-heading);
+    color: #fff;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #333;
+    display: inline-block;
+}
+
+.project-text p {
+    color: #aaa;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.project-media {
+    background: #111;
+    padding: 1rem;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #222;
+}
+
+.project-meta {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #222;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.project-meta p {
+    margin-bottom: 0.3rem;
+}
+
+.project-meta strong {
+    color: #999;
+}
+
+@media(max-width:768px) {
+    .project-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- BANNER WIDE (For Fursona Genesis) --- */
+.banner-wide {
+    grid-column: 1 / -1;
+    height: 350px;
+    background: url('../assets/fursona-genesis-portada.png') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--gold-dim);
+    margin-top: 1.5rem;
+    overflow: hidden;
+    text-decoration: none;
+    transition: transform 0.4s, border-color 0.4s;
+}
+
+.banner-wide:hover {
+    transform: scale(1.005);
+    border-color: var(--gold);
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.9) 100%);
+    z-index: 1;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 2rem;
+}
+
+.banner-content h3 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    color: var(--gold);
+    letter-spacing: 0.3em;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+}
+
+.banner-content p {
+    color: #fff;
+    letter-spacing: 0.2rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    opacity: 0.8;
+    font-weight: 600;
+}
+
+@media(max-width: 768px) {
+    .banner-wide {
+        height: 250px;
+    }
+
+    .banner-content h3 {
         font-size: 1.5rem;
     }
 }
