@@ -19,7 +19,8 @@
         body {
             height: 100vh;
             margin: 0;
-            overflow: hidden;
+            overflow: auto;
+            /* Allow scrolling/panning especially on mobile */
             background: #050505;
             /* Fallback */
             /* Custom Background if available - will be overridden by JS if needed or we can hardcode if we know the filename */
@@ -37,7 +38,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
+            /* overflow: hidden;  <-- CRITICAL CHANGE: Allow content to be seen if it expands */
+            overflow: visible;
             position: relative;
             perspective: 1500px;
         }

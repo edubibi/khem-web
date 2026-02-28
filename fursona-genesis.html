@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KHEM | Fursona Genesis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .nft-header {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .video-bg {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -10;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+
+        .overlay-dark {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.9) 100%);
+            z-index: -5;
+        }
+
+        .nft-title {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            color: var(--gold);
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+        }
+
+        .nft-tagline {
+            font-family: var(--font-body);
+            font-size: 1.2rem;
+            color: #fff;
+            letter-spacing: 0.5em;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .nft-desc {
+            max-width: 800px;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #eee;
+            margin-bottom: 40px;
+            font-weight: 700;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
+        }
+
+        .btn-mint {
+            display: inline-block;
+            padding: 15px 40px;
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            text-decoration: none;
+            font-family: var(--font-heading);
+            letter-spacing: 3px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .btn-mint:hover {
+            background: var(--gold);
+            color: #000;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+            transform: translateY(-3px);
+        }
+
+        /* --- GALLERY LAYOUT (Synch with trbandmusic) --- */
+        .gallery-container-custom {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 40px;
+            width: 95%;
+            max-width: 1200px;
+            margin: 80px auto 0;
+            text-align: left;
+            position: relative;
+            z-index: 2;
+        }
+
+        .main-portada-box {
+            position: sticky;
+            top: 120px;
+        }
+
+        .main-portada-box img {
+            width: 100%;
+            border-radius: 15px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+        }
+
+        .samples-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .sample-item {
+            aspect-ratio: 1 / 1;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .sample-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .sample-item:hover {
+            transform: scale(1.08);
+            border-color: var(--gold);
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+        }
+
+        .sample-item:hover img {
+            opacity: 1;
+        }
+
+        /* --- AUDIO CONTROLS (Synch with trbandmusic) --- */
+        .audio-controls {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            padding: 10px 20px;
+            border-radius: 50px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .audio-controls:hover {
+            border-color: var(--gold);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+        }
+
+        .btn-audio-toggle {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--gold-dim);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .btn-audio-toggle:hover {
+            background: var(--gold);
+            transform: scale(1.1);
+        }
+
+        .equalizer {
+            display: flex;
+            align-items: flex-end;
+            gap: 3px;
+            height: 18px;
+        }
+
+        .equalizer-bar {
+            width: 3px;
+            background: #000;
+            height: 100%;
+            animation: none;
+        }
+
+        .playing .equalizer-bar {
+            animation: equalize 0.8s ease-in-out infinite alternate;
+        }
+
+        .playing .equalizer-bar:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .playing .equalizer-bar:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes equalize {
+            0% {
+                height: 20%;
+            }
+
+            100% {
+                height: 100%;
+            }
+        }
+
+        .current-track {
+            font-size: 0.75rem;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            max-width: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            transition: all 0.5s ease;
+            font-family: var(--font-body);
+        }
+
+        .audio-controls:hover .current-track {
+            max-width: 200px;
+            margin-right: 10px;
+        }
+
+        @media (max-width: 900px) {
+            .gallery-container-custom {
+                grid-template-columns: 1fr;
+            }
+
+            .main-portada-box {
+                position: relative;
+                top: 0;
+            }
+
+            .nft-title {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay muted loop playsinline class="video-bg">
+        <source src="assets/BUILDING METAL MOUNTAIN 19.mp4" type="video/mp4">
+    </video>
+    <div class="overlay-dark"></div>
+
+    <!-- NAV -->
+    <nav class="top-nav">
+        <div class="nav-left">
+            <span class="brand-name">KHEM</span>
+            <span class="brand-sub">IMAGEN & SONIDO</span>
+        </div>
+        <div class="nav-right">
+            <a href="index.html#concepto">Concepto</a>
+            <a href="index.html#identidad">Identidad</a>
+            <a href="proyectos.html">Proyectos</a>
+            <a href="fursona-genesis.html" style="color: var(--gold);">Fursona Genesis</a>
+            <a href="index.html#artefactos">Artefactos</a>
+        </div>
+    </nav>
+
+    <header class="nft-header">
+        <div class="hero-content">
+            <h1 class="nft-title">FURSONA GENESIS</h1>
+            <p class="nft-tagline">MÚSICA & AVATARES</p>
+            <p class="nft-desc">
+                Colección de 10,197 avatares antropomórficos únicos como NFTs en Polygon blockchain.
+                Un universo visual donde cada identidad es una pieza de arte exclusiva.
+            </p>
+            <div style="margin-bottom: 60px;">
+                <a href="https://fursona-genesis.nfts2.me/" target="_blank" class="btn-mint">COLECCIÓN NFT</a>
+            </div>
+
+            <div class="gallery-container-custom">
+                <div class="main-portada-box">
+                    <h3
+                        style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--gold); margin-bottom: 20px; letter-spacing: 3px;">
+                        PORTADA PRINCIPAL</h3>
+                    <img src="assets/fursona-genesis-portada.png" alt="Fursona Genesis">
+                </div>
+                <div class="gallery-samples">
+                    <h3
+                        style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--gold); margin-bottom: 20px; letter-spacing: 3px;">
+                        GALERIA DE MUESTRA</h3>
+                    <div class="samples-grid">
+                        <div class="sample-item"><img src="assets/fursona-samples/01.jpg" loading="lazy"></div>
+                        <div class="sample-item"><img src="assets/fursona-samples/02.jpg" loading="lazy"></div>
+                        <div class="sample-item"><img src="assets/fursona-samples/03.jpg" loading="lazy"></div>
+                        <div class="sample-item"><img src="assets/fursona-samples/04.jpg" loading="lazy"></div>
+                        <div class="sample-item"><img src="assets/fursona-samples/05.jpg" loading="lazy"></div>
+                        <div class="sample-item"><img src="assets/fursona-samples/06.jpg" loading="lazy"></div>
+                        <div class="sample-item"><img src="assets/fursona-samples/07.jpg" loading="lazy"></div>
+                        <div class="sample-item"><img src="assets/fursona-samples/08.jpg" loading="lazy"></div>
+                        <div class="sample-item"><img src="assets/fursona-samples/09.jpg" loading="lazy"></div>
+                        <div class="sample-item"><img src="assets/fursona-samples/10.jpg" loading="lazy"></div>
+                        <div class="sample-item"><img src="assets/fursona-samples/11.jpg" loading="lazy"></div>
+                        <div class="sample-item"><img src="assets/fursona-samples/12.jpg" loading="lazy"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <footer class="conceptual-footer">
+        <div class="container">
+            <p class="closure-text">
+                KHEM · Fursona Genesis<br>
+                Identidades digitales para un universo en expansión.
+            </p>
+            <div class="closure-link">
+                <a href="index.html#contacto">Contactar con KHEM</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Audio Controls Container -->
+    <div class="audio-controls" id="audioContainer">
+        <span class="current-track" id="trackName">Seleccionando música...</span>
+        <button class="btn-audio-toggle" id="audioToggle">
+            <div class="equalizer" id="eq">
+                <div class="equalizer-bar"></div>
+                <div class="equalizer-bar"></div>
+                <div class="equalizer-bar"></div>
+            </div>
+        </button>
+    </div>
+
+    <!-- Background Audio -->
+    <audio id="bgMusic" loop preload="auto"></audio>
+
+    <script>
+        const songs = [
+            '01Medianoche-en-la-Terraza.mp3',
+            'All_around_if_you_want.mp3',
+            'Black_and_grey_.mp3',
+            'Close_Your_Feelings_Extended.mp3',
+            'Groove_or_not.mp3',
+            'Heaven_s_Glow.mp3',
+            'Man_island_beach.mp3',
+            'Meanwhile_I_Love_You.mp3',
+            'Saxo_by_the_clouds.mp3',
+            'Saxophone_Serenade.mp3',
+            'Secret-of-Velvet.mp3',
+            'Sharp-echoes.mp3',
+            'Soft-corners.mp3',
+            'Voices_for_dreams.mp3',
+            'Woman_on_the_island_beach.mp3'
+        ];
+
+        const audio = document.getElementById('bgMusic');
+        const audioToggle = document.getElementById('audioToggle');
+        const audioContainer = document.getElementById('audioContainer');
+        const trackName = document.getElementById('trackName');
+
+        // Pick random song
+        const randomSong = songs[Math.floor(Math.random() * songs.length)];
+        audio.src = randomSong;
+        trackName.textContent = "KHEM | " + randomSong;
+
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play().then(() => {
+                    audioContainer.classList.add('playing');
+                }).catch(err => {
+                    console.log("Autoplay blocked, waiting for interaction");
+                });
+            } else {
+                audio.pause();
+                audioContainer.classList.remove('playing');
+            }
+        }
+
+        audioToggle.addEventListener('click', toggleAudio);
+
+        // Optional: Start on first click anywhere if browser blocks autoplay
+        document.body.addEventListener('click', function () {
+            if (audio.paused && !audioContainer.classList.contains('playing')) {
+                // We don't force start to avoid annoying users, 
+                // but we could if we wanted immediate immersion
+            }
+        }, { once: true });
+    </script>
+</body>
+
+</html>
