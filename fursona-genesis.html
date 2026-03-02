@@ -276,42 +276,83 @@
 
     <!-- NAV -->
     <nav class="top-nav">
-        <div class="nav-left">
-            <span class="brand-name">KHEM</span>
-            <span class="brand-sub">ARTE · SONIDO · PALABRA</span>
+        <div style="display: flex; flex-direction: column; align-items: start;">
+            <div onclick="window.location.href='index.html'" style="cursor: pointer;">
+                <span class="brand-name">KHEM</span>
+                <span class="brand-sub">ARTE · SONIDO · PALABRA</span>
+            </div>
+            <a href="index.html#artefactos"
+                style="color: #ff4b4b; font-weight: bold; font-size: 0.65rem; border: 1px solid #ff4b4b; padding: 2px 10px; border-radius: 4px; text-decoration: none; margin-top: 5px; letter-spacing: 1px; text-transform: uppercase;">&larr;
+                SALIR</a>
         </div>
         <div class="nav-right">
+            <a href="index.html">Inicio</a>
             <a href="index.html#concepto">Concepto</a>
             <a href="index.html#identidad">Identidad</a>
-            <a href="proyectos.html">Proyectos</a>
-            <a href="fursona-genesis.html" style="color: var(--gold);">Fursona Genesis</a>
+            <a href="index.html#procesos">Proyectos</a>
+            <a href="quantum-deities.html">Quantum Deities</a>
             <a href="index.html#artefactos">Artefactos</a>
+            <a href="index.html#contacto">Contacto</a>
         </div>
     </nav>
 
     <header class="nft-header">
         <div class="hero-content">
-            <h1 class="nft-title">FURSONA GENESIS</h1>
+            <h1 class="brand-title">FURSONA GENESIS</h1>
             <p class="nft-tagline">MÚSICA & AVATARES</p>
             <p class="nft-desc">
-                Colección de 10,197 avatares antropomórficos únicos como NFTs en Polygon blockchain.
+                Colección de más de 21,590 avatares antropomórficos únicos como NFTs en Polygon blockchain.
                 Un universo visual donde cada identidad es una pieza de arte exclusiva.
             </p>
-            <div style="margin-bottom: 60px;">
-                <a href="https://fursona-genesis.nfts2.me/" target="_blank" class="btn-mint">COLECCIÓN NFT</a>
+
+            <!-- Promo for Genesis 1 & 2 -->
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;">
+                <!-- Genesis 1 -->
+                <div
+                    style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 25px; max-width: 400px; backdrop-filter: blur(10px); flex: 1; min-width: 280px;">
+                    <h2 style="color: #fff; margin-bottom: 5px; font-family: var(--font-heading); letter-spacing: 2px;">
+                        FURSONA GENESIS 1</h2>
+                    <p style="color: #aaa; margin-bottom: 20px; font-size: 0.8rem; letter-spacing: 2px;">10,197 AVATARES
+                    </p>
+                    <a href="https://fursona-genesis.nfts2.me/" target="_blank" class="btn-mint"
+                        style="padding: 10px 20px; font-size: 0.8rem; border-color: #fff; color: #fff;">MINTEAR G1</a>
+                </div>
+
+                <!-- Genesis 2 -->
+                <div
+                    style="background: rgba(212, 175, 55, 0.1); border: 1px solid var(--gold); border-radius: 4px; padding: 25px; max-width: 400px; backdrop-filter: blur(10px); flex: 1; min-width: 280px;">
+                    <h2
+                        style="color: var(--gold); margin-bottom: 5px; font-family: var(--font-heading); letter-spacing: 2px;">
+                        FURSONA GENESIS 2</h2>
+                    <p style="color: #fff; margin-bottom: 20px; font-size: 0.8rem; letter-spacing: 2px;">11,393 NUEVOS
+                        AVATARES</p>
+                    <a href="https://fursona-genesis-2.nfts2.me/" target="_blank" class="btn-mint"
+                        style="background: var(--gold); color: #000; padding: 10px 20px; font-size: 0.8rem;">MINTEAR
+                        G2</a>
+                </div>
             </div>
 
-            <div class="gallery-container-custom">
+            <div style="margin-bottom: 60px;">
+                <a href="https://fursona-genesis.nfts2.me/" target="_blank" class="btn-mint">COLECCIÓN GENESIS 1</a>
+            </div>
+
+            <!-- SECTION: GENESIS 1 (EXISTING) -->
+            <div class="gallery-container-custom" id="genesis1"
+                style="margin-top: 60px; border-top: 1px solid rgba(251, 251, 251, 0.05); padding-top: 40px;">
                 <div class="main-portada-box">
                     <h3
-                        style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--gold); margin-bottom: 20px; letter-spacing: 3px;">
-                        PORTADA PRINCIPAL</h3>
+                        style="font-family: var(--font-heading); font-size: 1.1rem; color: #fff; margin-bottom: 20px; letter-spacing: 3px;">
+                        GENESIS 1: PORTADA</h3>
                     <img src="assets/fursona-genesis-portada.png" alt="Fursona Genesis">
+                    <div style="margin-top: 20px; text-align: center;">
+                        <a href="https://fursona-genesis.nfts2.me/" target="_blank" class="btn-mint"
+                            style="width: 80%;">MINTEAR GENESIS 1</a>
+                    </div>
                 </div>
                 <div class="gallery-samples">
                     <h3
-                        style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--gold); margin-bottom: 20px; letter-spacing: 3px;">
-                        GALERIA DE MUESTRA</h3>
+                        style="font-family: var(--font-heading); font-size: 1.1rem; color: #fff; margin-bottom: 20px; letter-spacing: 3px;">
+                        MUESTRAS G1</h3>
                     <div class="samples-grid">
                         <div class="sample-item"><img src="assets/fursona-samples/01.jpg" loading="lazy"></div>
                         <div class="sample-item"><img src="assets/fursona-samples/02.jpg" loading="lazy"></div>
@@ -319,6 +360,18 @@
                         <div class="sample-item"><img src="assets/fursona-samples/04.jpg" loading="lazy"></div>
                         <div class="sample-item"><img src="assets/fursona-samples/05.jpg" loading="lazy"></div>
                         <div class="sample-item"><img src="assets/fursona-samples/06.jpg" loading="lazy"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION: GENESIS 2 -->
+            <div class="gallery-container-custom" id="genesis2"
+                style="margin-top: 100px; border-top: 1px solid rgba(212, 175, 55, 0.2); padding-top: 60px;">
+                <div class="gallery-samples">
+                    <h3
+                        style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--gold); margin-bottom: 20px; letter-spacing: 3px;">
+                        MUESTRAS G2</h3>
+                    <div class="samples-grid">
                         <div class="sample-item"><img src="assets/fursona-samples/07.jpg" loading="lazy"></div>
                         <div class="sample-item"><img src="assets/fursona-samples/08.jpg" loading="lazy"></div>
                         <div class="sample-item"><img src="assets/fursona-samples/09.jpg" loading="lazy"></div>
@@ -327,7 +380,19 @@
                         <div class="sample-item"><img src="assets/fursona-samples/12.jpg" loading="lazy"></div>
                     </div>
                 </div>
+                <div class="main-portada-box">
+                    <h3
+                        style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--gold); margin-bottom: 20px; letter-spacing: 3px;">
+                        GENESIS 2: PORTADA</h3>
+                    <img src="assets/fursona-genesis-portada.png" alt="Fursona Genesis 2"
+                        style="border-color: var(--gold);">
+                    <div style="margin-top: 20px; text-align: center;">
+                        <a href="https://fursona-genesis-2.nfts2.me/" target="_blank" class="btn-mint"
+                            style="width: 80%; background: var(--gold); color: #000;">MINTEAR GENESIS 2</a>
+                    </div>
+                </div>
             </div>
+
         </div>
     </header>
 
