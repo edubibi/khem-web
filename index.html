@@ -1,115 +1,405 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
+    <!-- SYNC TEST MARKER: 2026-03-01 07:44 -->
     <meta charset="UTF-8">
-    <!-- SYNC TEST MARKER: 2026-03-01 09:50 (Manolo) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Arte | Portafolio Oficial</title>
-    <link rel="stylesheet" href="main.css?v=102">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>KHEM | Donde el Arte cobra sentido</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="logo"><img src="assets/logo_banner.png" alt="Logo"></div>
-        <ul class="nav-links">
-            <li><a href="sobre-mi.html">Sobre M&iacute;</a></li>
-            <li><a href="memorandum.html">Universo EDUSSE</a></li>
-            <li><a href="colecciones.html">Colecciones</a></li>
-            <li><a href="fursona-genesis.html" style="color: #a020f0; font-weight: bold;">Fursona Genesis</a></li>
-            <li><a href="quantum-deities.html">Quantum Deities</a></li>
-
-            <li><a href="compra.html">Cómo Comprar</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="carrito.html">Carrito <span class="cart-badge"></span></a></li>
-        </ul>
-    </nav>
-
-    <!-- Hero Section -->
+    <!-- HERO SECTION -->
+    <!-- HERO SECTION -->
     <header class="hero">
-        <div class="hero-content minimalist-hero">
-            <h1 class="zigzag-title">
-                <span class="line-1">La imaginación abre el camino,</span>
-                <span class="line-2">la técnica lo vuelve arte</span>
-            </h1>
-            <div class="hero-buttons minimalist-buttons">
-                <a href="cuadroteca/index.html" class="btn text-btn outline-btn">GALERÍA DIGITAL</a>
-                <p class="hero-subtitle">Obras únicas creadas por Eduardo Ramírez<br>en simbiosis con Inteligencia
-                    Artificial.</p>
+        <video autoplay muted loop playsinline class="video-bg">
+            <source src="assets/BUILDING METAL MOUNTAIN 19.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+
+        <!-- Minimal Nav (Lynch & Powell Style) -->
+        <nav class="top-nav">
+            <div class="nav-left" onclick="window.location.href='index.html'" style="cursor: pointer;">
+                <span class="brand-name">KHEM</span>
+                <span class="brand-sub">ARTE · SONIDO · PALABRA</span>
             </div>
+            <div class="nav-right">
+                <a href="#concepto">Concepto</a>
+                <a href="#identidad">Identidad</a>
+                <a href="#procesos">Proyectos</a>
+                <a href="fursona-genesis.html">Fursona Genesis</a>
+                <a href="quantum-deities.html">Quantum Deities</a>
+                <a href="#artefactos">Artefactos</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <!-- Central clean text as requested -->
+            <h1 class="tagline fade-in">KHEM</h1>
+            <p class="sub-tagline fade-in-delay">DONDE EL ARTE COBRA SENTIDO</p>
+            <p class="hero-desc fade-in-delay">Un universo creativo audiovisual donde sonido e imagen se desarrollan
+                juntas.</p>
+        </div>
+
+        <div class="scroll-indicator">
+            <span>&#8595;</span>
         </div>
     </header>
 
-    <!-- Fursona Collection Highlights (Added for Consistency) -->
-    <section id="nfts" class="section" style="padding: 40px 20px; text-align: center; background: #000; color: #fff;">
+    <!-- CONCEPTO SECTION -->
+    <section id="concepto" class="philosophy">
         <div class="container">
-            <h2 style="font-family: 'Playfair Display', serif; margin-bottom: 30px;">COLECCIONES NFT RECIENTES</h2>
-            <div style="display: flex; gap: 30px; justify-content: center; flex-wrap: wrap;">
-                <!-- Card for F1 -->
-                <div style="background: rgba(255,255,255,0.05); border: 1px solid #333; padding: 20px; border-radius: 15px; max-width: 400px; transition: transform 0.3s;"
-                    onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
-                    <img src="assets/00FURSONA GENESIS/fursona-genesis-portada.png" alt="Fursona Genesis"
-                        style="width: 100%; height: 350px; object-fit: contain; background: #050505; border-radius: 10px; margin-bottom: 15px;">
-                    <h3>FURSONA GENESIS</h3>
-                    <p style="color: #888; margin-bottom: 20px;">10,197 Avatares únicos en Polygon.</p>
-                    <a href="fursona-genesis.html"
-                        style="color: #fff; text-decoration: underline; font-weight: bold;">VER DETALLES</a>
+            <h2 class="section-title">CONCEPTO</h2>
+            <div class="content-grid two-cols">
+                <div class="text-block">
+                    <h3>Universo Creativo</h3>
+                    <p>KHEM es un proyecto creativo donde la música y la imagen van juntas. No se trata solo de escuchar
+                        canciones o ver vídeos, sino de imaginar mundos, sensaciones e historias.</p>
+                    <p>Cada proyecto de KHEM nace de una idea: una atmósfera, una emoción o una imagen mental que quiere
+                        cobrar forma.</p>
+                    <p>No hace falta saber de música ni de arte. KHEM está ahí para que la música y el arte formen parte
+                        de la vida.</p>
                 </div>
-                <!-- Card for F2 -->
-                <div style="background: rgba(255,255,255,0.05); border: 1px solid #a020f0; padding: 20px; border-radius: 15px; max-width: 400px; transition: transform 0.3s;"
-                    onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
-                    <img src="assets/fursona-geminis-2-portada.png" alt="Fursona Genesis 2"
-                        style="width: 100%; height: 350px; object-fit: contain; background: #050505; border-radius: 10px; margin-bottom: 15px;">
-                    <h3 style="color: #a020f0;">FURSONA GENESIS 2</h3>
-                    <p style="color: #888; margin-bottom: 20px;">11,393 Nuevos avatares · ¡Recién subidos!</p>
-                    <a href="https://fursona-genesis-2.nfts2.me/" target="_blank"
-                        style="background: #a020f0; color: #fff; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block;">MINTEAR
-                        AHORA</a>
-                </div>
-                <!-- Card for Quantum -->
-                <div style="background: rgba(255,255,255,0.05); border: 1px solid #00f2ff; padding: 20px; border-radius: 15px; max-width: 400px; transition: transform 0.3s;"
-                    onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
-                    <img src="assets/quantum-deities-portada.png" alt="Quantum Deities"
-                        style="width: 100%; height: 350px; object-fit: contain; background: #050505; border-radius: 10px; margin-bottom: 15px;">
-                    <h3 style="color: #00f2ff;">QUANTUM DEITIES</h3>
-                    <p style="color: #888; margin-bottom: 20px;">164 Unique NFTs · AI & Cyber Mythology</p>
-                    <a href="https://quantum-deities-1premium.nfts2.me/" target="_blank"
-                        style="background: #00f2ff; color: #000; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block;">MINT
-                        POLYGON</a>
-                </div>
-                <!-- Card for Vortex -->
-                <div style="background: rgba(255,255,255,0.05); border: 1px solid #ff007f; padding: 20px; border-radius: 15px; max-width: 400px; transition: transform 0.3s;"
-                    onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
-                    <img src="assets/vortex-portada.jpg" alt="Vortex 1.0"
-                        style="width: 100%; height: 350px; object-fit: contain; background: #050505; border-radius: 10px; margin-bottom: 15px;">
-                    <h3 style="color: #ff007f;">VORTEX 1.0</h3>
-                    <p style="color: #888; margin-bottom: 20px;">175 Obras maestras de Deidades Cuánticas.</p>
-                    <a href="https://vortex-1-0.nfts2.me/" target="_blank"
-                        style="background: #ff007f; color: #fff; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block;">MINTEAR
-                        VORTEX</a>
+                <div class="image-block">
+                    <!-- Rotating 3D Asset or Abstract Visual -->
+                    <img src="assets/3D musica para imaginar MAY.png" alt="Orbe 3D" class="artifact-3d rotating">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Featured Section removed by user preference -->
+    <!-- IDENTIDAD SECTION (3 Columns) -->
+    <section id="identidad" class="identity">
+        <div class="container">
+            <h2 class="section-title">IDENTIDAD</h2>
+            <div class="content-grid three-cols">
+                <!-- COL 1 -->
+                <div class="identity-col">
+                    <div class="col-header">
+                        <span class="col-num">01</span>
+                        <h3>QUÉ ES</h3>
+                    </div>
+                    <p>KHEM es un universo creativo audiovisual donde música e imagen se desarrollan juntas. Conviviendo
+                        todos sus elementos como partes de un mismo proceso creativo.</p>
+                    <p>No trabaja por estilos cerrados ni por formatos fijos. Cada proyecto encuentra su propia forma,
+                        su propio sonido y su propia imagen.</p>
+                </div>
 
-    <footer class="site-footer"
-        style="text-align: center; padding: 2rem; background-color: transparent; color: inherit; border-top: 1px solid #eaeaea; margin-top: 4rem;">
-        <p style="margin-bottom: 0.5rem; font-size: 0.9rem;">&copy; e.ramirez 2026. Todos los derechos reservados.</p>
-        <a href="condiciones.html" style="color: inherit; text-decoration: underline; font-size: 0.85rem;">Términos y
-            Condiciones</a>
+                <!-- COL 2 -->
+                <div class="identity-col">
+                    <div class="col-header">
+                        <span class="col-num">02</span>
+                        <h3>QUÉ HACE</h3>
+                    </div>
+                    <p>KHEM desarrolla proyectos audiovisuales donde sonido e imagen se construyen de forma conjunta.
+                    </p>
+                    <p>Cada pieza nace de una idea y se despliega en distintas formas: canciones, piezas sonoras,
+                        vídeos, videoclips o formatos breves.</p>
+                </div>
+
+                <!-- COL 3 -->
+                <div class="identity-col">
+                    <div class="col-header">
+                        <span class="col-num">03</span>
+                        <h3>CÓMO TRABAJA</h3>
+                    </div>
+                    <p>Trabaja a partir de ideas y conceptos que marcan el punto de partida. A veces el proceso comienza
+                        con el sonido, otras con una imagen.</p>
+                    <p>Los elementos se desarrollan, se prueban y se ajustan hasta encontrar una forma común.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESOS SECTION (Merged from Proyectos) -->
+    <section id="procesos" class="process-section">
+        <div class="container">
+            <h2 class="section-title">PROYECTOS</h2>
+            <div class="process-steps">
+                <p
+                    style="text-align: center; color: #fff; margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    Los proyectos en KHEM se desarrollan a través de un proceso estructurado, flexible y coherente,
+                    donde la improvisación, la casualidad y distintos marcos mentales son fundamentales, y donde sonido
+                    e imagen convergen en el arte final.
+                </p>
+
+                <div class="step">
+                    <h3>Preproducción</h3>
+                    <p>En esta fase se define un punto de partida, no un resultado cerrado.</p>
+                </div>
+
+                <div class="step">
+                    <h3>Arreglos y edición</h3>
+                    <p>En esta etapa, los elementos comienzan a tomar forma y también a transformarse.</p>
+                </div>
+
+                <div class="step">
+                    <h3>Producción y arte final</h3>
+                    <p>En la fase final, todos los elementos se integran. El sonido y la imagen encuentran su forma
+                        definitiva.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECT DETAIL: THE BOY (Merged from Proyectos) -->
+    <section class="project-detail">
+        <div class="container">
+            <div class="project-header">
+                <h2 class="section-title" data-text="KHEM PROYECTO">PROYECTO DESTACADO</h2>
+                <h1 class="project-title">THE BOY OF MERRY CHRISTMAS FEEL SONG</h1>
+                <p class="project-subtitle">“NO LO VAS A CREER: Los sueños de un niño que van a cambiarlo todo…”</p>
+            </div>
+
+            <div class="project-content">
+                <div class="project-text">
+                    <h4>Introducción</h4>
+                    <p>Este proyecto se presenta como un videoclip musical que combina narrativa visual y canción
+                        original para construir una historia emocional ligada a la infancia, los sueños y el cambio.</p>
+
+                    <h4>La Música</h4>
+                    <p>La canción es una pieza pop moderna navideña, cantada en inglés, con un enfoque actual y
+                        emocional.</p>
+
+                    <h4>El Proceso</h4>
+                    <p>Construido íntegramente con imágenes generadas por IA, basadas en fotografías creadas previamente
+                        bajo la premisa de un guión narrativo definido.</p>
+
+                    <div class="project-meta">
+                        <p><strong>Formato:</strong> Videoclip | <strong>Audio:</strong> Canción original</p>
+                        <p><strong>Estado:</strong> Terminado y publicado</p>
+                    </div>
+                </div>
+
+                <div class="project-media">
+                    <style>
+                        @keyframes vidglass-float {
+                            0% {
+                                transform: translateY(0);
+                            }
+
+                            50% {
+                                transform: translateY(-10px);
+                            }
+
+                            100% {
+                                transform: translateY(0);
+                            }
+                        }
+                    </style>
+                    <!-- VidGlass - Local Video 1 (The Boy) -->
+                    <div
+                        style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 24px; padding: 20px; box-shadow: 0 8px 32px rgba(0,0,0,0.3); overflow: hidden; width: 100%; margin: 0 auto; animation: vidglass-float 6s ease-in-out infinite;">
+                        <video controls poster="assets/CLEM musica.png"
+                            style="width: 100%; border-radius: 12px; display: block; filter: brightness(1.1);">
+                            <source src="assets/The_Boy_of_Merry_Christmas.mp4" type="video/mp4">
+                            Tu navegador no soporta el tag de video.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROYECTO SEGUNDO: NUEVO LANZAMIENTO -->
+    <section class="project-detail" style="background: #050505; border-top: 1px solid #111; padding-top: 40px;">
+        <div class="container">
+            <div class="project-content" style="flex-direction: row-reverse;">
+                <div class="project-text">
+                    <h4>Nueva Experimentación</h4>
+                    <p>VidGlass Edition: Un nuevo paso en la visualización creativa de KHEM.</p>
+                </div>
+
+                <div class="project-media" style="background: transparent; border: none; padding: 0;">
+                    <div class="video-container"
+                        style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 24px; padding: 20px; box-shadow: 0 8px 32px rgba(0,0,0,0.3); overflow: hidden; width: 100%; margin: 0 auto; animation: vidglass-float 6s ease-in-out infinite; animation-delay: 3s;">
+                        <video controls poster="assets/CLEM musica.png"
+                            style="width: 100%; border-radius: 12px; display: block; filter: brightness(1.1);">
+                            <source src="assets/The_Boy_of_Merry_Christmas.mp4" type="video/mp4">
+                            Tu navegador no soporta el tag de video.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LITERATURA SECTION (Merged from Proyectos) -->
+    <section id="literatura" class="project-detail" style="background: #080808; border-top: 1px solid #111;">
+        <div class="container">
+            <div class="project-header">
+                <h1 class="project-title">LIBROS Y NARRATIVA</h1>
+                <p class="project-subtitle">Historias que se leen, se tocan y se imaginan.</p>
+            </div>
+
+            <div class="project-content">
+                <div class="project-text">
+                    <h4>El Enfoque</h4>
+                    <p>En KHEM, la palabra escrita es otra forma de sonido. Desarrollamos libros, novelas y guiones
+                        donde el texto cobra vida propia.</p>
+                    <ul class="step-list" style="margin-top: 1rem;">
+                        <li><strong>CHOKITITOS:</strong> Un regalo intemporal.</li>
+                        <li><strong>Novela:</strong> Narrativa de largo formato (En desarrollo).</li>
+                    </ul>
+                </div>
+
+                <div class="project-media" style="background: transparent; border: none; padding: 0;">
+                    <!-- Card for CHOKITITOS -->
+                    <article class="card"
+                        style="width: 100%; max-width: 400px; margin: 0 auto; cursor: pointer; border: 1px solid var(--gold-dim);"
+                        onclick="window.location.href='libros/chokititos/index.html'">
+                        <div class="card-image"
+                            style="height: 400px; background: url('libros/chokititos/assets/fondo.png'); background-size: cover; position: relative;">
+                            <div
+                                style="position: absolute; bottom: 0; left: 0; width: 100%; background: linear-gradient(to top, rgba(0,0,0,0.95), transparent); padding: 2rem 1rem; text-align: center;">
+                                <h3
+                                    style="color: var(--gold); font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 0.5rem; letter-spacing: 0.1em;">
+                                    CHOKITITOS</h3>
+                                <p
+                                    style="color: #fff; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.2em;">
+                                    Leer Libro Interactivo &rarr;</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SHOWCASE SECTION (Cards) -->
+    <section id="artefactos" class="showcase">
+        <div class="container">
+            <h2 class="section-title">ARTEFACTOS</h2>
+            <div class="cards-grid">
+                <!-- CLEM -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="assets/CLEM musica.png" alt="CLEM">
+                    </div>
+                    <div class="card-info">
+                        <h3>CLEM</h3>
+                        <p>La voz visual. Resonancia pura.</p>
+                    </div>
+                </article>
+
+                <!-- GESTO -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="assets/KHEM_LOGOgesto_definitivo.png" alt="Gesto">
+                    </div>
+                    <div class="card-info">
+                        <h3>EL GESTO</h3>
+                        <p>La marca de la creación.</p>
+                    </div>
+                </article>
+
+                <!-- KHEM -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="assets/Portada logo KHEM vinilo.png" alt="Vinilo KHEM">
+                    </div>
+                    <div class="card-info">
+                        <h3>LA OBRA</h3>
+                        <p>Producción de alta fidelidad.</p>
+                    </div>
+                </article>
+
+                <!-- FURSONA GENESIS BANNER -->
+                <a href="fursona-genesis.html" class="banner-wide">
+                    <div class="banner-overlay"></div>
+                    <div class="banner-content">
+                        <h3>FURSONA GENESIS</h3>
+                        <p>MÁS DE 21,590 AVATARES ÚNICOS · POLYGON BLOCKCHAIN</p>
+                        <span
+                            style="display: inline-block; margin-top: 15px; color: var(--gold); text-decoration: none; font-size: 0.8rem; letter-spacing: 2px; border-bottom: 1px solid var(--gold-dim); padding-bottom: 5px; text-transform: uppercase;">VER
+                            COLECCIÓN COMPLETA</span>
+                    </div>
+                </a>
+
+
+                <!-- QUANTUM DEITIES BANNER -->
+                <a href="quantum-deities.html" class="banner-wide"
+                    style="margin-top: 20px; background-image: url('assets/quantum-deities-portada.png'); border: 1px solid #00f2ff;">
+                    <div class="banner-overlay" style="background: rgba(0,0,0,0.6);"></div>
+                    <div class="banner-content">
+                        <h3 style="color: #00f2ff;">QUANTUM DEITIES</h3>
+                        <p>164 AVATARES ÚNICOS · DIVINIDADES DIGITALES</p>
+                        <span
+                            style="display: inline-block; margin-top: 15px; color: #00f2ff; text-decoration: none; font-size: 0.8rem; letter-spacing: 2px; border-bottom: 1px solid #00f2ff; padding-bottom: 5px; text-transform: uppercase;">VER
+                            DETALLES Y MUESTRAS</span>
+                    </div>
+                </a>
+
+                <!-- VORTEX 1.0 BANNER (RECOVERY) -->
+                <a href="https://vortex-1-0.nfts2.me/" target="_blank" class="banner-wide"
+                    style="margin-top: 20px; background-image: url('assets/vortex-portada.jpg'); border: 1px solid #ff007f;">
+                    <div class="banner-overlay" style="background: rgba(0,0,0,0.6);"></div>
+                    <div class="banner-content">
+                        <h3 style="color: #ff007f;">VORTEX 1.0</h3>
+                        <p>175 OBRAS MAESTRAS · DEIDADES CUÁNTICAS</p>
+                        <span
+                            style="display: inline-block; margin-top: 15px; color: #ff007f; text-decoration: none; font-size: 0.8rem; letter-spacing: 2px; border-bottom: 1px solid #ff007f; padding-bottom: 5px; text-transform: uppercase;">MINTEAR EN NFT2ME &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- PROMPT COPIER LINK -->
+                <div style="grid-column: 1 / -1; text-align: center; margin-top: 30px;">
+                    <a href="visor_copiador_prompts.html" 
+                       style="color: var(--gold); text-decoration: none; font-family: var(--font-heading); letter-spacing: 3px; border: 1px solid var(--gold-dim); padding: 15px 30px; display: inline-block; transition: all 0.3s; background: rgba(212, 175, 55, 0.05);"
+                       onmouseover="this.style.background='rgba(212, 175, 55, 0.1)'; this.style.borderColor='var(--gold)';"
+                       onmouseout="this.style.background='rgba(212, 175, 55, 0.05)'; this.style.borderColor='var(--gold-dim)';"
+                       >VISOR DE PROMPTS VORTEX</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 class="section-title">CONTACTO</h2>
+            <div class="contact-wrapper">
+                <p class="contact-intro">Para iniciar una conversación sobre un nuevo proyecto o universo.</p>
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="NOMBRE" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="EMAIL" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" rows="5" placeholder="MENSAJE" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">ENVIAR TRANSMISIÓN</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- CIERRE CONCEPTUAL (Minimal Footer) -->
+    <footer class="conceptual-footer">
+        <div class="container">
+            <p class="closure-text">
+                KHEM · Donde el Arte cobra sentido<br>
+                Un universo creativo audiovisual donde sonido e imagen se desarrollan juntas.<br>
+                Proyectos que nacen de una idea y dejan espacio a la imaginación.
+            </p>
+            <div class="closure-link">
+                <a href="#concepto">Conocer KHEM</a>
+            </div>
+        </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="js/data.js?v=101"></script>
-    <script src="js/cart.js?v=101"></script>
-    <script src="js/loader.js?v=101"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
