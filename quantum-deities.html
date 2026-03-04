@@ -4,252 +4,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COLECCIÓN QUANTUM DEITIES | Tu Arte</title>
-    <link rel="stylesheet" href="main.css?v=102">
+    <title>KHEM | QUANTUM DEITIES</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <style>
         .nft-hero {
-            background: #000;
+            background: #050505;
             color: #fff;
-            padding: 80px 20px;
+            padding: 120px 20px 80px;
             text-align: center;
-            border-bottom: 1px solid #333;
-        }
-
-        .nft-cta-container {
-            margin-top: 40px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
+            border-bottom: 1px solid #111;
         }
 
         .btn-mint {
-            background: #00f2ff;
-            color: #000;
+            background: transparent;
+            color: #fff;
             padding: 15px 40px;
             text-decoration: none;
+            font-family: 'Cinzel', serif;
             font-weight: bold;
-            border-radius: 50px;
-            font-size: 1.2rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            font-size: 1.1rem;
             transition: all 0.3s ease;
-            box-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
+            display: inline-block;
         }
 
         .btn-mint:hover {
-            background: #fff;
-            transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(0, 242, 255, 0.6);
+            border-color: #00f2ff;
+            color: #00f2ff;
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.2);
+            transform: translateY(-2px);
         }
 
         .nft-stats {
-            margin-top: 30px;
+            margin-top: 40px;
             color: #888;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
+            font-size: 0.8rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-family: 'Cinzel', serif;
         }
 
-        /* --- GALLERY LAYOUT --- */
         .gallery-container-custom {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 30px;
             width: 95%;
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 60px auto 0;
-            text-align: left;
+            text-align: center;
         }
 
-        .main-portada-box {
-            position: sticky;
-            top: 100px;
+        .sample-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
         }
 
-        .main-portada-box img {
+        .sample-item {
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: #080808;
+            overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s;
+        }
+
+        .sample-item:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .sample-item img {
             width: 100%;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            height: auto;
+            display: block;
+            filter: grayscale(20%);
+            transition: filter 0.3s;
         }
 
-        @media (max-width: 900px) {
-            .gallery-container-custom {
-                grid-template-columns: 1fr;
-            }
+        .sample-item:hover img {
+            filter: grayscale(0%);
+        }
 
-            .main-portada-box {
-                position: relative;
-                top: 0;
-            }
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #333, transparent);
+            margin: 80px auto;
+            max-width: 600px;
         }
     </style>
 </head>
 
 <body>
-    <nav class="navbar">
-        <div style="display: flex; flex-direction: column; align-items: start;">
-            <div class="logo"><img src="assets/logo_banner.png" alt="Logo"></div>
-            <a href="index.html#nfts"
-                style="color: #ff4b4b; font-weight: bold; font-size: 0.65rem; border: 1px solid #ff4b4b; padding: 2px 8px; border-radius: 4px; text-decoration: none; margin-top: 5px; letter-spacing: 1px; text-transform: uppercase; font-family: Lato, sans-serif;">&larr;
-                SALIR</a>
+    <!-- Minimal Nav -->
+    <nav class="top-nav">
+        <div class="nav-left" onclick="window.location.href='index.html'" style="cursor: pointer;">
+            <span class="brand-name">KHEM</span>
+            <span class="brand-sub">QUANTUM DEITIES</span>
         </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="sobre-mi.html">Sobre M&iacute;</a></li>
-            <li><a href="memorandum.html">Universo EDUSSE</a></li>
-            <li><a href="colecciones.html">Colecciones</a></li>
-            <li><a href="fursona-genesis.html" style="color: #a020f0; font-weight: bold;">Fursona Genesis</a></li>
-            <li><a href="compra.html">Cómo Comprar</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="carrito.html">Carrito <span class="cart-badge"></span></a></li>
-        </ul>
+        <div class="nav-right">
+            <a href="index.html">Inicio</a>
+            <a href="index.html#procesos">Proyectos</a>
+            <a href="fursona-genesis.html">Fursona</a>
+            <a href="index.html#contacto">Contacto</a>
+        </div>
     </nav>
 
-    <header class="nft-hero" style="position: relative;">
+    <header class="nft-hero">
         <div class="container">
-            <h1 style="font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 20px;">COLECCIÓN
-                QUANTUM DEITIES (VORTEX + CLÁSICA)</h1>
-            <p style="max-width: 800px; margin: 0 auto; font-size: 1.2rem; line-height: 1.6; color: #ccc;">
-                339 UNIQUE NFTs · FORGED AT THE NEXUS OF AI · CYBER MYTHOLOGY
+            <h1 style="font-family: 'Cinzel', serif; font-size: 3rem; margin-bottom: 20px; letter-spacing: 5px;">QUANTUM
+                DEITIES</h1>
+            <p
+                style="max-width: 700px; margin: 0 auto; font-size: 1rem; line-height: 1.8; color: #888; font-weight: 300; letter-spacing: 1px;">
+                EL NEXO ENTRE LA MITOLOGÍA CYBER Y LA INTELIGENCIA ARTIFICIAL.<br>
+                UNA EXPLORACIÓN VISUAL DE DIVINIDADES DIGITALES.
             </p>
 
-            <!-- Promo Banners Container -->
-            <div
-                style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin: 30px auto; max-width: 900px;">
+            <div class="section-divider"></div>
 
-                <!-- No cross-promotions here as requested -->
-
-            </div>
-
-            <div class="nft-stats">SECCIÓN NUEVA: VORTEX 1.0</div>
-
-            <div class="nft-cta-container">
+            <!-- VORTEX 1.0 -->
+            <div class="nft-stats" style="color: #ff007f;">NUEVO LANZAMIENTO: VORTEX 1.0</div>
+            <div style="margin-top: 25px;">
                 <a href="https://vortex-1-0.nfts2.me/" target="_blank" class="btn-mint"
-                    style="background: #ff007f; box-shadow: 0 0 20px rgba(255, 0, 127, 0.4); color: #fff;">MINTEAR
-                    VORTEX EN POLYGON</a>
+                    style="border-color: rgba(255, 0, 127, 0.3);">
+                    MINT VORTEX &rarr;
+                </a>
             </div>
 
-            <!-- GALERÍA VORTEX 1.0 -->
-            <div class="gallery-container-custom"
-                style="grid-template-columns: 1fr; max-width: 900px; gap: 40px; margin-bottom: 80px; padding-bottom: 40px; border-bottom: 1px solid #333;">
-                <div>
-                    <h3
-                        style="font-size: 1.2rem; color: #ff007f; margin-bottom: 20px; text-align: center; text-transform: uppercase; letter-spacing: 3px;">
-                        MUESTRAS DE VORTEX 1.0</h3>
-                    <div
-                        style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px;">
-                        <div
-                            style="border: 1px solid rgba(255,0,127,0.2); border-radius: 8px; overflow: hidden; background: #080808;">
-                            <img src="assets/vortex-samples/01.jpg" style="width: 100%; height: auto; display: block;"
-                                loading="lazy">
-                        </div>
-                        <div
-                            style="border: 1px solid rgba(255,0,127,0.2); border-radius: 8px; overflow: hidden; background: #080808;">
-                            <img src="assets/vortex-samples/02.jpg" style="width: 100%; height: auto; display: block;"
-                                loading="lazy">
-                        </div>
-                        <div
-                            style="border: 1px solid rgba(255,0,127,0.2); border-radius: 8px; overflow: hidden; background: #080808;">
-                            <img src="assets/vortex-samples/03.jpg" style="width: 100%; height: auto; display: block;"
-                                loading="lazy">
-                        </div>
-                        <div
-                            style="border: 1px solid rgba(255,0,127,0.2); border-radius: 8px; overflow: hidden; background: #080808;">
-                            <img src="assets/vortex-samples/04.jpg" style="width: 100%; height: auto; display: block;"
-                                loading="lazy">
-                        </div>
-                        <div
-                            style="border: 1px solid rgba(255,0,127,0.2); border-radius: 8px; overflow: hidden; background: #080808;">
-                            <img src="assets/vortex-samples/05.jpg" style="width: 100%; height: auto; display: block;"
-                                loading="lazy">
-                        </div>
-                        <div
-                            style="border: 1px solid rgba(255,0,127,0.2); border-radius: 8px; overflow: hidden; background: #080808;">
-                            <img src="assets/vortex-samples/06.jpg" style="width: 100%; height: auto; display: block;"
-                                loading="lazy">
-                        </div>
-                    </div>
+            <div class="gallery-container-custom">
+                <div class="sample-grid">
+                    <div class="sample-item"><img src="assets/vortex-samples/01.jpg" loading="lazy"></div>
+                    <div class="sample-item"><img src="assets/vortex-samples/02.jpg" loading="lazy"></div>
+                    <div class="sample-item"><img src="assets/vortex-samples/03.jpg" loading="lazy"></div>
                 </div>
 
-                <div class="main-portada-box" style="margin-top: 40px;">
-                    <h3
-                        style="font-size: 1.2rem; color: #ff007f; margin-bottom: 20px; text-align: center; text-transform: uppercase;">
-                        PORTADA VORTEX 1.0 (LA REINA DRAGO)</h3>
+                <div style="margin-top: 60px; max-width: 800px; margin-left: auto; margin-right: auto;">
                     <img src="assets/vortex-portada.jpg" alt="Vortex Portada"
-                        style="max-height: 600px; width: 100%; object-fit: contain; display: block; margin: 0 auto; box-shadow: 0 10px 40px rgba(255, 0, 127, 0.3);">
+                        style="width: 100%; border: 1px solid rgba(255, 0, 127, 0.2); box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+                    <p style="margin-top: 15px; font-size: 0.7rem; color: #555; letter-spacing: 2px;">LA REINA DRAGO ·
+                        VORTEX 1.0</p>
                 </div>
             </div>
 
-            <!-- GALERÍA CLÁSICA -->
-            <div class="nft-stats">COLECCIÓN ORIGINAL: QUANTUM DEITIES</div>
+            <div class="section-divider"></div>
 
-            <div class="nft-cta-container">
-                <a href="https://quantum-deities-1premium.nfts2.me/" target="_blank" class="btn-mint">MINTEAR CLÁSICA EN
-                    POLYGON</a>
+            <!-- CLÁSICA -->
+            <div class="nft-stats" style="color: #00f2ff;">COLECCIÓN ORIGINAL</div>
+            <div style="margin-top: 25px;">
+                <a href="https://quantum-deities-1premium.nfts2.me/" target="_blank" class="btn-mint"
+                    style="border-color: rgba(0, 242, 255, 0.3);">
+                    MINT CLÁSICA &rarr;
+                </a>
             </div>
 
-            <div class="gallery-container-custom" style="grid-template-columns: 1fr; max-width: 900px; gap: 40px;">
-                <div>
-                    <h3
-                        style="font-size: 1.2rem; color: #00f2ff; margin-bottom: 20px; text-align: center; text-transform: uppercase; letter-spacing: 3px;">
-                        MUESTRAS ORIGINALES</h3>
-                    <div
-                        style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px;">
-                        <div
-                            style="border: 1px solid rgba(0,242,255,0.2); border-radius: 8px; overflow: hidden; background: #080808;">
-                            <img src="assets/quantum-samples/01.png" style="width: 100%; height: auto; display: block;"
-                                loading="lazy">
-                        </div>
-                        <div
-                            style="border: 1px solid rgba(0,242,255,0.2); border-radius: 8px; overflow: hidden; background: #080808;">
-                            <img src="assets/quantum-samples/02.png" style="width: 100%; height: auto; display: block;"
-                                loading="lazy">
-                        </div>
-                        <div
-                            style="border: 1px solid rgba(0,242,255,0.2); border-radius: 8px; overflow: hidden; background: #080808;">
-                            <img src="assets/quantum-samples/03.png" style="width: 100%; height: auto; display: block;"
-                                loading="lazy">
-                        </div>
-                        <div
-                            style="border: 1px solid rgba(0,242,255,0.2); border-radius: 8px; overflow: hidden; background: #080808;">
-                            <img src="assets/quantum-samples/04.png" style="width: 100%; height: auto; display: block;"
-                                loading="lazy">
-                        </div>
-                        <div
-                            style="border: 1px solid rgba(0,242,255,0.2); border-radius: 8px; overflow: hidden; background: #080808;">
-                            <img src="assets/quantum-samples/05.png" style="width: 100%; height: auto; display: block;"
-                                loading="lazy">
-                        </div>
-                        <div
-                            style="border: 1px solid rgba(0,242,255,0.2); border-radius: 8px; overflow: hidden; background: #080808;">
-                            <img src="assets/quantum-samples/06.png" style="width: 100%; height: auto; display: block;"
-                                loading="lazy">
-                        </div>
-                    </div>
+            <div class="gallery-container-custom">
+                <div class="sample-grid">
+                    <div class="sample-item"><img src="assets/quantum-samples/01.png" loading="lazy"></div>
+                    <div class="sample-item"><img src="assets/quantum-samples/02.png" loading="lazy"></div>
+                    <div class="sample-item"><img src="assets/quantum-samples/03.png" loading="lazy"></div>
                 </div>
 
-                <div class="main-portada-box" style="margin-top: 40px;">
-                    <h3
-                        style="font-size: 1.2rem; color: #00f2ff; margin-bottom: 20px; text-align: center; text-transform: uppercase;">
-                        PORTADA OFICIAL</h3>
-                    <img src="assets/quantum-deities-portada.png" alt="Quantum Deities Portada">
+                <div style="margin-top: 60px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    <img src="assets/quantum-deities-portada.png" alt="Quantum Deities Portada"
+                        style="width: 100%; border: 1px solid rgba(0, 242, 255, 0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
                 </div>
             </div>
         </div>
     </header>
 
-    <footer class="site-footer"
-        style="text-align: center; padding: 2rem; background-color: transparent; color: inherit; border-top: 1px solid #eaeaea; margin-top: 4rem;">
-        <p style="margin-bottom: 0.5rem; font-size: 0.9rem;">&copy; e.ramirez 2026. Todos los derechos reservados.</p>
-        <a href="condiciones.html" style="color: inherit; text-decoration: underline; font-size: 0.85rem;">Términos y
-            Condiciones</a>
+    <footer class="conceptual-footer">
+        <div class="container">
+            <p class="closure-text">
+                KHEM · Donde el Arte cobra sentido<br>
+                Un universo creativo audiovisual donde sonido e imagen se desarrollan juntas.
+            </p>
+            <div class="closure-link">
+                <a href="index.html">Volver al Inicio</a>
+            </div>
+        </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="js/data.js?v=101"></script>
-    <script src="js/cart.js?v=101"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
