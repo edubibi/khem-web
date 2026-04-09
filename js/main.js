@@ -27,11 +27,16 @@ document.addEventListener('DOMContentLoaded', () => {
         item.addEventListener('click', () => {
             const type = item.getAttribute('data-type') || 'image';
             const title = item.getAttribute('data-title');
-            
             const modalBody = document.querySelector('.modal-content');
             
-            // LIMPIEZA TOTAL: Resetear el body pero mantener el elemento del título
-            modalBody.innerHTML = `<h3 id="modal-title">${title}</h3>`;
+            // LIMPIEZA ABSOLUTA
+            modalBody.innerHTML = '';
+            
+            // Re-inyectar título
+            const h3 = document.createElement('h3');
+            h3.id = 'modal-title';
+            h3.textContent = title;
+            modalBody.appendChild(h3);
 
             if (type === 'links') {
                 const linksContainer = document.createElement('div');
@@ -47,28 +52,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 `;
                 modalBody.appendChild(linksContainer);
             } else {
-                const imgPaths = item.getAttribute('data-images').split(',');
-                const wrapper = document.createElement('div');
-                wrapper.className = 'img-collection-wrapper';
-                
-                imgPaths.forEach(path => {
-                    const imgContainer = document.createElement('div');
-                    imgContainer.className = 'img-wrapper';
+                const imagesAttr = item.getAttribute('data-images');
+                if (imagesAttr) {
+                    const imgPaths = imagesAttr.split(',');
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'img-collection-wrapper';
                     
-                    const img = document.createElement('img');
-                    img.src = path.trim();
-                    img.alt = "Prueba de Veracidad Real";
-                    
-                    const label = document.createElement('div');
-                    label.className = 'proof-label';
-                    label.textContent = 'VORTEX - REAL PROOF';
-                    
-                    imgContainer.appendChild(img);
-                    imgContainer.appendChild(label);
-                    wrapper.appendChild(imgContainer);
-                });
-                
-                modalBody.appendChild(wrapper);
+                    imgPaths.forEach(path => {
+                        const imgContainer = document.createElement('div');
+                        imgContainer.className = 'img-wrapper';
+                        
+                        const img = document.createElement('img');
+                        img.src = path.trim();
+                        img.alt = "Prueba de Veracidad Real";
+                        
+                        const label = document.createElement('div');
+                        label.className = 'proof-label';
+                        label.textContent = 'VORTEX - REAL PROOF';
+                        
+                        imgContainer.appendChild(img);
+                        imgContainer.appendChild(label);
+                        wrapper.appendChild(imgContainer);
+                    });
+                    modalBody.appendChild(wrapper);
+                }
             }
 
             modal.style.display = 'block';
