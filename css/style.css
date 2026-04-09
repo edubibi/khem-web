@@ -813,3 +813,89 @@ footer {
         font-size: 1.5rem;
     }
 }
+
+/* MATRIX SECTION */
+.matrix-section {
+    padding: 8rem 2rem;
+    background: #000;
+    text-align: center;
+    border-top: 1px solid #111;
+}
+
+.matrix-intro {
+    font-size: 1.2rem;
+    color: #888;
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+    letter-spacing: 0.1em;
+}
+
+.matrix-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.matrix-item {
+    background: rgba(212, 175, 55, 0.03);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    padding: 3rem 2rem;
+    min-width: 200px;
+    flex: 1;
+    transition: all 0.4s ease;
+}
+
+.matrix-item:hover {
+    background: rgba(212, 175, 55, 0.08);
+    border-color: var(--gold);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.matrix-num {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+.matrix-label {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    color: #aaa;
+}
+
+/* ARCHITECT PORTRAIT */
+.portrait-container {
+    position: relative;
+    padding: 15px;
+    background: linear-gradient(45deg, var(--gold-dim), transparent);
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.architect-portrait {
+    max-width: 100%;
+    border-radius: 5px;
+    display: block;
+    filter: sepia(0.2) contrast(1.1) brightness(0.9);
+    transition: all 0.5s ease;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+}
+
+.portrait-container:hover .architect-portrait {
+    filter: sepia(0) contrast(1.2) brightness(1);
+    transform: scale(1.02);
+}
+
+@media(max-width: 768px) {
+    .matrix-num {
+        font-size: 2rem;
+    }
+}
