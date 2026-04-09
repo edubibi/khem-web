@@ -25,13 +25,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
     matrixItems.forEach(item => {
         item.addEventListener('click', () => {
-            const imgPath = item.getAttribute('data-image');
+            const type = item.getAttribute('data-type') || 'image';
             const title = item.getAttribute('data-title');
             
-            modalImg.src = imgPath;
             modalTitle.textContent = title;
+            const modalBody = document.querySelector('.modal-content');
+            
+            // Limpiar contenido previo (excepto el título)
+            const existingMedia = modalBody.querySelector('img, .links-container');
+            if (existingMedia) existingMedia.remove();
+
+            if (type === 'links') {
+                const linksContainer = document.createElement('div');
+                linksContainer.className = 'links-container';
+                linksContainer.innerHTML = `
+                    <div class="framed-links">
+                        <a href="https://dudeduart.es" target="_blank" class="matrix-link">DUDEDUART.ES <i class="ph ph-arrow-square-out"></i></a>
+                        <a href="https://khem.es" target="_blank" class="matrix-link">KHEM.ES <i class="ph ph-arrow-square-out"></i></a>
+                        <a href="https://trbandmusic.es" target="_blank" class="matrix-link">TRBANDMUSIC.ES <i class="ph ph-arrow-square-out"></i></a>
+                        <a href="https://lamesadesalyolivo.es" target="_blank" class="matrix-link">LA MESA DE SAL Y OLIVO <i class="ph ph-arrow-square-out"></i></a>
+                        <a href="https://jjalmela.es" target="_blank" class="matrix-link">JJALMELA.ES <i class="ph ph-arrow-square-out"></i></a>
+                    </div>
+                `;
+                modalBody.appendChild(linksContainer);
+            } else {
+                const imgPath = item.getAttribute('data-image');
+                const img = document.createElement('img');
+                img.id = 'modal-img';
+                img.src = imgPath;
+                img.alt = "Prueba de Veracidad";
+                
+                // Overlay "PROOF OF WORK" label
+                const label = document.createElement('div');
+                label.className = 'proof-label';
+                label.textContent = 'VORTEX - VISUAL PROOF (INTERNAL PREVIEW)';
+                
+                const wrapper = document.createElement('div');
+                wrapper.className = 'img-wrapper';
+                wrapper.appendChild(img);
+                wrapper.appendChild(label);
+                
+                modalBody.appendChild(wrapper);
+            }
+
             modal.style.display = 'block';
-            document.body.style.overflow = 'hidden'; // Stop scrolling
+            document.body.style.overflow = 'hidden';
         });
     });
 

@@ -963,3 +963,60 @@ footer {
 .modal-close:hover {
     color: var(--gold);
 }
+
+/* PRUEBA DE VERACIDAD STYLES */
+.img-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.proof-label {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--gold);
+    padding: 8px 15px;
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    border: 1px solid var(--gold);
+    text-transform: uppercase;
+    pointer-events: none;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.framed-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 0;
+}
+
+.matrix-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    border: 1px solid var(--gold-dim);
+    background: rgba(212, 175, 55, 0.05);
+    color: #fff;
+    text-decoration: none;
+    font-family: var(--font-heading);
+    letter-spacing: 0.2rem;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.matrix-link:hover {
+    background: rgba(212, 175, 55, 0.15);
+    border-color: var(--gold);
+    transform: translateX(10px);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
+}
+
+.matrix-link i {
+    color: var(--gold);
+    font-size: 1.2rem;
+}
