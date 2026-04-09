@@ -75,6 +75,23 @@ document.addEventListener('DOMContentLoaded', () => {
                         wrapper.appendChild(imgContainer);
                     });
                     modalBody.appendChild(wrapper);
+
+                    // --- NUEVA DESCRIPCIÓN PARA APPS ---
+                    if (title.toLowerCase().includes('apps')) {
+                        const description = document.createElement('div');
+                        description.className = 'modal-description';
+                        description.innerHTML = `
+                            <div class="app-info-block">
+                                <h4>SANA & MIMO (Proyecto Salud)</h4>
+                                <p>Plataforma tecnológica dedicada a la salud y el bienestar, diseñada específicamente con una interfaz accesible para <strong>personas mayores</strong>. <span class="device-tag">(para móvil)</span></p>
+                            </div>
+                            <div class="app-info-block">
+                                <h4>WEB MASTERING STUDIO</h4>
+                                <p>Estación de trabajo de audio digital avanzada para el procesamiento final de obras musicales en la nube.</p>
+                            </div>
+                        `;
+                        modalBody.appendChild(description);
+                    }
                 }
             }
 

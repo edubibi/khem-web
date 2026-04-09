@@ -1039,3 +1039,40 @@ footer {
     height: auto;
     object-fit: contain;
 }
+
+/* DESCIPCIÓN DE APPS EN MODAL */
+.modal-description {
+    margin-top: 2rem;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 1px solid var(--gold-dim);
+    padding-top: 2rem;
+}
+
+.app-info-block {
+    margin-bottom: 2rem;
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.app-info-block h4 {
+    color: var(--gold);
+    font-family: var(--font-heading);
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.app-info-block p {
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.device-tag {
+    color: var(--gold);
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
