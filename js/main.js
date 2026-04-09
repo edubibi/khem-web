@@ -83,11 +83,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         description.innerHTML = `
                             <div class="app-info-block">
                                 <h4>SANA & MIMO (Proyecto Salud)</h4>
-                                <p>Plataforma tecnológica dedicada a la salud y el bienestar, diseñada específicamente con una interfaz accesible para <strong>personas mayores</strong>. <span class="device-tag">(para móvil)</span></p>
+                                <p>Plataforma de bienestar y asistencia diseñada específicamente para la <strong>accesibilidad de personas mayores</strong>. Un sistema de cuidado preventivo y seguimiento intuitivo. <span class="device-tag">(para móvil)</span></p>
                             </div>
                             <div class="app-info-block">
-                                <h4>WEB MASTERING STUDIO</h4>
-                                <p>Estación de trabajo de audio digital avanzada para el procesamiento final de obras musicales en la nube.</p>
+                                <h4>AUDIOFORGE MASTERING STUDIO</h4>
+                                <p>Herramienta avanzada de ingeniería de sonido con visualización de espectro en tiempo real y ecualización paramétrica de 24 bandas para el acabado final de producciones musicales.</p>
                             </div>
                         `;
                         modalBody.appendChild(description);

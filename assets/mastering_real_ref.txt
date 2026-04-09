@@ -1,0 +1,2 @@
+// No code here, just saving the image metadata or instructions for future reference if needed.
+// The image provided by the user is real and will be used as the primary proof of work for the Mastering app.
