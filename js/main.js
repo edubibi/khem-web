@@ -97,6 +97,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             modal.style.display = 'block';
             document.body.style.overflow = 'hidden';
+
+            // Forzar un pequeño reflow para asegurar renderizado correcto
+            const lastWrapper = modalBody.querySelector('.img-collection-wrapper');
+            if (lastWrapper) {
+                lastWrapper.style.display = 'none';
+                lastWrapper.offsetHeight; 
+                lastWrapper.style.display = 'flex';
+            }
         });
     });
 
