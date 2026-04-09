@@ -28,12 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const type = item.getAttribute('data-type') || 'image';
             const title = item.getAttribute('data-title');
             
-            modalTitle.textContent = title;
             const modalBody = document.querySelector('.modal-content');
             
-            // Limpiar TODO el contenido previo (excepto el título)
-            const mediaSelectors = 'img, .links-container, .img-collection-wrapper, .img-wrapper, .proof-label';
-            modalBody.querySelectorAll(mediaSelectors).forEach(el => el.remove());
+            // LIMPIEZA TOTAL: Resetear el body pero mantener el elemento del título
+            modalBody.innerHTML = `<h3 id="modal-title">${title}</h3>`;
 
             if (type === 'links') {
                 const linksContainer = document.createElement('div');
