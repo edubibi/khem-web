@@ -49,21 +49,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 `;
                 modalBody.appendChild(linksContainer);
             } else {
-                const imgPath = item.getAttribute('data-image');
-                const img = document.createElement('img');
-                img.id = 'modal-img';
-                img.src = imgPath;
-                img.alt = "Prueba de Veracidad";
-                
-                // Overlay "PROOF OF WORK" label
-                const label = document.createElement('div');
-                label.className = 'proof-label';
-                label.textContent = 'VORTEX - VISUAL PROOF (INTERNAL PREVIEW)';
-                
+                const imgPaths = item.getAttribute('data-images').split(',');
                 const wrapper = document.createElement('div');
-                wrapper.className = 'img-wrapper';
-                wrapper.appendChild(img);
-                wrapper.appendChild(label);
+                wrapper.className = 'img-collection-wrapper';
+                
+                imgPaths.forEach(path => {
+                    const imgContainer = document.createElement('div');
+                    imgContainer.className = 'img-wrapper';
+                    
+                    const img = document.createElement('img');
+                    img.src = path.trim();
+                    img.alt = "Prueba de Veracidad Real";
+                    
+                    const label = document.createElement('div');
+                    label.className = 'proof-label';
+                    label.textContent = 'VORTEX - REAL PROOF';
+                    
+                    imgContainer.appendChild(img);
+                    imgContainer.appendChild(label);
+                    wrapper.appendChild(imgContainer);
+                });
                 
                 modalBody.appendChild(wrapper);
             }
