@@ -122,23 +122,23 @@
             <p class="matrix-intro">El núcleo de datos de un ecosistema en expansión constante. La prueba real de una creatividad sin límites.</p>
             
             <div class="matrix-grid">
-                <div class="matrix-item">
+                <div class="matrix-item" data-image="assets/3D musica para imaginar MAY.png" data-title="Producción Musical">
                     <span class="matrix-num">321</span>
                     <span class="matrix-label">Obras Musicales</span>
                 </div>
-                <div class="matrix-item">
+                <div class="matrix-item" data-image="assets/quantum-deities-portada.png" data-title="Colecciones NFT">
                     <span class="matrix-num">21.754</span>
                     <span class="matrix-label">Activos NFT</span>
                 </div>
-                <div class="matrix-item">
+                <div class="matrix-item" data-image="assets/gesto y clem de KHEM.png" data-title="Estilos de Pintura">
                     <span class="matrix-num">37</span>
                     <span class="matrix-label">Estilos de Pintura</span>
                 </div>
-                <div class="matrix-item">
+                <div class="matrix-item" data-image="assets/fursona-genesis-portada.png" data-title="Ecosistema de Portales">
                     <span class="matrix-num">5</span>
                     <span class="matrix-label">Portales Web</span>
                 </div>
-                <div class="matrix-item">
+                <div class="matrix-item" data-image="assets/Logo KHEM tarjetas.png" data-title="Apps y Proyectos">
                     <span class="matrix-num">13</span>
                     <span class="matrix-label">Apps y Proyectos</span>
                 </div>
@@ -377,14 +377,6 @@
                     </div>
                 </a>
 
-                <!-- PROMPT COPIER LINK -->
-                <div style="grid-column: 1 / -1; text-align: center; margin-top: 30px;">
-                    <a href="visor_copiador_prompts.html" 
-                       style="color: var(--gold); text-decoration: none; font-family: var(--font-heading); letter-spacing: 3px; border: 1px solid var(--gold-dim); padding: 15px 30px; display: inline-block; transition: all 0.3s; background: rgba(212, 175, 55, 0.05);"
-                       onmouseover="this.style.background='rgba(212, 175, 55, 0.1)'; this.style.borderColor='var(--gold)';"
-                       onmouseout="this.style.background='rgba(212, 175, 55, 0.05)'; this.style.borderColor='var(--gold-dim)';"
-                       >VISOR DE PROMPTS VORTEX</a>
-                </div>
             </div>
         </div>
     </section>
@@ -441,6 +433,15 @@
         </a>
 >>>>>>> 331a163d2132d3da5f44e82a586d95984def2007
     </footer>
+
+    <!-- MODAL PARA VERACIDAD (MATRIZ) -->
+    <div id="matrix-modal" class="modal">
+        <span class="modal-close">&times;</span>
+        <div class="modal-content">
+            <h3 id="modal-title"></h3>
+            <img id="modal-img" src="" alt="Prueba de Veracidad">
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>
