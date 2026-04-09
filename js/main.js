@@ -31,9 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
             modalTitle.textContent = title;
             const modalBody = document.querySelector('.modal-content');
             
-            // Limpiar contenido previo (excepto el título)
-            const existingMedia = modalBody.querySelector('img, .links-container');
-            if (existingMedia) existingMedia.remove();
+            // Limpiar TODO el contenido previo (excepto el título)
+            const mediaSelectors = 'img, .links-container, .img-collection-wrapper, .img-wrapper, .proof-label';
+            modalBody.querySelectorAll(mediaSelectors).forEach(el => el.remove());
 
             if (type === 'links') {
                 const linksContainer = document.createElement('div');
