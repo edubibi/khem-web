@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <a href="https://khem.es" target="_blank" class="matrix-link">KHEM.ES <i class="ph ph-arrow-square-out"></i></a>
                         <a href="https://trbandmusic.es" target="_blank" class="matrix-link">TRBANDMUSIC.ES <i class="ph ph-arrow-square-out"></i></a>
                         <a href="http://lamesadesalyolivo.es" target="_blank" class="matrix-link">LA MESA DE SAL Y OLIVO <i class="ph ph-arrow-square-out"></i></a>
-                        <a href="https://jjalmela.es" target="_blank" class="matrix-link">JJALMELA.ES <i class="ph ph-arrow-square-out"></i></a>
+                        <a href="https://jj-almela.com" target="_blank" class="matrix-link">JJALMELA.ES <i class="ph ph-arrow-square-out"></i></a>
                     </div>
                 `;
                 modalBody.appendChild(linksContainer);
