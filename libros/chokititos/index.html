@@ -5,251 +5,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHOKITITOS | KHEM</title>
-    <!-- Link to Main CSS -->
     <link rel="stylesheet" href="../../css/style.css">
-
-    <!-- Viewer Specific CSS (Copied from flipbook maker) -->
-    <script>
-        window.onerror = function (msg, url, line, col, error) {
-            alert("Error: " + msg + "\nEn: " + line + ":" + col);
-            return false;
-        };
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <style>
         body {
-            height: 100vh;
             margin: 0;
-            overflow: auto;
-            /* Allow scrolling/panning especially on mobile */
-            background: #050505;
-            /* Fallback */
-            /* Custom Background if available - will be overridden by JS if needed or we can hardcode if we know the filename */
-            background: radial-gradient(circle at center, #8B5A2B 0%, #4A3018 100%);
-        }
-
-        .app-container {
-            height: 100%;
+            padding: 0;
+            background: radial-gradient(circle at center, #1a1a1a 0%, #050505 100%);
+            color: white;
+            font-family: 'Lato', sans-serif;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
-        .scene {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            /* overflow: hidden;  <-- CRITICAL CHANGE: Allow content to be seen if it expands */
-            overflow: visible;
+        .container {
+            max-width: 800px;
+            text-align: center;
+            padding: 2rem;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .cover-wrapper {
+            margin-bottom: 2rem;
             position: relative;
-            perspective: 1500px;
+            display: inline-block;
         }
 
-        /* Flipbook Container */
-        #flipbook-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transform-style: preserve-3d;
-            height: 100%;
-        }
-
-        /* Toolbar */
-        .toolbar {
-            height: 50px;
-            background: rgba(0, 0, 0, 0.8);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0 1rem;
-            color: white;
-            z-index: 100;
-            gap: 1rem;
-            backdrop-filter: blur(5px);
-            border-bottom: 1px solid #333;
-        }
-
-        .toolbar button {
-            background: #333;
-            border: 1px solid #555;
-            color: white;
-            padding: 0.3rem 0.8rem;
-            cursor: pointer;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            transition: all 0.2s;
-        }
-
-        .toolbar button:hover {
-            background: #d4af37;
-            color: #000;
-            border-color: #d4af37;
-        }
-
-        .page-nav {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-family: monospace;
-        }
-
-        /* Arrows */
-        .nav-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 3rem;
-            color: rgba(255, 255, 255, 0.3);
-            cursor: pointer;
-            z-index: 50;
-            user-select: none;
-            transition: all 0.3s;
-            padding: 1rem;
-        }
-
-        .nav-arrow:hover {
-            color: #d4af37;
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 50%;
-        }
-
-        .nav-arrow.prev {
-            left: 1rem;
-        }
-
-        .nav-arrow.next {
-            right: 1rem;
-        }
-
-        /* Loader */
-        #loading-screen {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .cover-img {
+            max-width: 400px;
             width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 200;
-        }
-
-        .loader {
-            border: 5px solid #333;
-            border-top: 5px solid #d4af37;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
-            margin-bottom: 1rem;
-        }
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        .hidden {
-            display: none !important;
-        }
-
-        /* Web specific overrides */
-        .back-link {
-            position: absolute;
-            top: 1rem;
-            left: 1rem;
-            z-index: 300;
-            color: #fff;
-            text-decoration: none;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 0.5rem 1rem;
-            border: 1px solid #333;
             border-radius: 4px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        h1 {
             font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            margin: 1rem 0;
+            letter-spacing: 4px;
+            color: #d4af37;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #aaa;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .amazon-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+            color: black;
+            text-decoration: none;
+            padding: 1.2rem 3rem;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-radius: 2px;
             transition: all 0.3s;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .amazon-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.4);
+            filter: brightness(1.1);
+        }
+
+        .back-link {
+            margin-top: 4rem;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
         }
 
         .back-link:hover {
-            border-color: #d4af37;
             color: #d4af37;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            .cover-img { max-width: 280px; }
         }
     </style>
 </head>
 
 <body>
 
-    <a href="../../proyectos.html" class="back-link">← VOLVER A PROYECTOS</a>
-
-    <main class="app-container">
-        <div id="loading-screen">
-            <div class="loader"></div>
-            <p id="loading-text" style="color: white; font-weight: bold; font-family: sans-serif;">Cargando
-                "CHOKITITOS"...</p>
+    <div class="container">
+        <div class="cover-wrapper">
+            <!-- Usamos la imagen del tintero que es la que identifica al libro en la web -->
+            <img src="../../assets/items/item_libro.jpg" alt="Chokititos Cover" class="cover-img">
         </div>
 
-        <div id="book-viewer" class="hidden">
-            <div class="toolbar">
-                <button id="btn-prev">← Anterior</button>
-                <div class="page-nav">
-                    <span>Pág</span>
-                    <input type="number" id="page-nav-input" min="1" value="1"
-                        style="width: 50px; text-align: center; background: #222; color: #fff; border: 1px solid #444;">
-                    <span id="page-total">de ?</span>
-                    <button id="btn-go-page">Ir</button>
-                </div>
-                <button id="btn-next">Siguiente →</button>
-                <div class="zoom-controls" style="margin-left: 2rem; display: flex; gap: 0.5rem;">
-                    <button id="btn-zoom-out" title="Restaurar tamaño">🔍 Alejar</button>
-                    <button id="btn-zoom-in" title="Hacer Zoom">🔍 Leer</button>
-                </div>
-            </div>
+        <h1>CHOKITITOS</h1>
+        <p class="tagline">Un regalo intemporal</p>
 
-            <div class="scene">
-                <div id="nav-arrow-prev" class="nav-arrow prev" title="Anterior">❮</div>
-                <div id="nav-arrow-next" class="nav-arrow next" title="Siguiente">❯</div>
-                <div id="flipbook-container"></div>
-            </div>
-        </div>
-    </main>
+        <a href="https://www.amazon.es/dp/B0GHZS9LFY" target="_blank" class="amazon-btn">
+            ADQUIRIR EN AMAZON (EBOOK)
+        </a>
 
-    <!-- Libraries -->
-    <script src="lib/pdf.min.js"></script>
-    <script>
-        pdfjsLib.GlobalWorkerOptions.workerSrc = 'lib/pdf.worker.min.js';
-    </script>
-    <script src="lib/page-flip.browser.js"></script>
-    <script src="js/pdf_renderer.js"></script>
+        <br>
+        <a href="../../index.html#literatura" class="back-link">← Volver a Proyectos</a>
+    </div>
 
-    <!-- Book Configuration -->
-    <script>
-        // List of PDF assets relative to this HTML file
-        window.BOOK_DATA = [
-            "assets/01CHOQUITITO INTRO.pdf",
-            "assets/02CHOQUITITO CAP 1 Y 2.pdf",
-            "assets/03CHOQUITITO CAP 3 Y 4.pdf",
-            "assets/04CHOQUITITO CAP 5 Y 6.pdf",
-            "assets/05CHOQUITITO CAO 7_8 Y 9.pdf",
-            "assets/06CHOQUITITO CAP 10_11 Y 12.pdf",
-            "assets/07CHOQUITITO CAP 13_14 Y 15.pdf",
-            "assets/08CHOQUITITO CAP 16_17_18_19 Y 20.pdf",
-            "assets/09CHOQUITITO CAP 21_22_23_24 Y 25.pdf",
-            "assets/10CHOQUITITO CAP 26 A FINAL.pdf"
-        ];
-
-        // Custom background injection
-        document.body.style.background = "url('assets/fondo.png') no-repeat center center fixed";
-        document.body.style.backgroundSize = "cover";
-        // Fallback or override if png exists, using JS check or just CSS fallback is harder. 
-        // We'll rely on common names or just manual update if needed.
-    </script>
-
-    <script src="js/app.js?v=2"></script>
 </body>
 
 </html>
