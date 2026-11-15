@@ -1,445 +1,404 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-    <title>KHEM | Donde el Arte cobra sentido</title>
+    <title>KHEM · Donde el Arte cobra Sentido · Eduardo Ramírez de Cartagena</title>
+    <meta name="description" content="KHEM es la matriz creativa de autor de Eduardo Ramírez de Cartagena: Sonido, Imagen, Palabra y Vanguardia.">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@300;400;500;600;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Estilo de Museo Contemporáneo -->
+    <link rel="stylesheet" href="css/khem_museo.css">
 </head>
-
 <body>
 
-    <!-- HERO SECTION -->
-    <!-- HERO SECTION -->
-    <header class="hero">
-        <video autoplay muted loop playsinline class="video-bg">
-            <source src="assets/BUILDING METAL MOUNTAIN 19.mp4" type="video/mp4">
-        </video>
-        <div class="overlay"></div>
-
-        <!-- Minimal Nav (Lynch & Powell Style) -->
-        <nav class="top-nav">
-            <div class="nav-left" onclick="window.location.href='index.html'" style="cursor: pointer;">
-                <span class="brand-name">KHEM</span>
-                <span class="brand-sub">ARTE · SONIDO · PALABRA</span>
-            </div>
-            <div class="nav-right">
-                <a href="#concepto">Concepto</a>
-                <a href="#identidad">Identidad</a>
-                <a href="#matriz">La Matriz</a>
-                <a href="#procesos">Proyectos</a>
-                <a href="fursona-genesis.html">Fursona Genesis</a>
-                <a href="quantum-deities.html">Quantum Deities</a>
-                <a href="#artefactos">Artefactos</a>
-                <a href="#contacto">Contacto</a>
-            </div>
+    <!-- 1. CABECERA FIJA MINIMALISTA -->
+    <header class="khem-nav">
+        <a href="#hero" class="khem-brand">
+            <span class="khem-brand-logo">KHEM</span>
+            <span class="khem-seal-erc">ERC</span>
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#puertas">Las 4 Casas</a></li>
+                <li><a href="#magnitud">Magnitud</a></li>
+                <li><a href="#manifiesto">Manifiesto</a></li>
+                <li><a href="#muestrario">Muestrario</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
         </nav>
-
-        <div class="hero-content">
-            <!-- Central clean text as requested -->
-            <h1 class="tagline fade-in">KHEM</h1>
-            <p class="sub-tagline fade-in-delay">LA MATRIZ DEL LEGADO</p>
-            <p class="hero-desc fade-in-delay">Donde una vida de experiencia se encuentra con el futuro de la Inteligencia Artificial.</p>
-        </div>
-
-        <div class="scroll-indicator">
-            <span>&#8595;</span>
-        </div>
+        <a href="#contacto" class="nav-action-btn">Despacho de Autor</a>
     </header>
 
-    <!-- CONCEPTO SECTION -->
-    <section id="concepto" class="philosophy">
-        <div class="container">
-            <h2 class="section-title">CONCEPTO</h2>
-            <div class="content-grid two-cols">
-                <div class="text-block">
-                    <h3>El Origen: Las Memorias</h3>
-                    <p>KHEM no nació como un proyecto tecnológico, sino como un acto de amor. Todo comenzó con el deseo de Eduardo Ramírez de escribir sus **memorias** para sus nietos.</p>
-                    <p>Ese impulso inicial de "ordenar una vida" se convirtió en el Big Bang de este ecosistema, donde la palabra escrita dio paso al sonido y a la imagen generativa.</p>
-                    <p>Hoy, KHEM es la unión de 72 años de inquietudes humanas potenciadas por la tecnología más avanzada.</p>
-                </div>
-                <div class="image-block">
-                    <!-- Retrato del Arquitecto (Saliendo del cuadro) -->
-                    <div class="portrait-container">
-                        <img src="assets/eduardo_artista.jpg" alt="Eduardo Ramírez - El Arquitecto de KHEM" class="architect-portrait">
-                    </div>
-                </div>
+    <!-- 2. HERO CINEMATOGRÁFICO -->
+    <section id="hero" class="khem-hero">
+        <video class="hero-video-bg" autoplay muted loop playsinline poster="assets/arte_vidriera_maestra.jpg">
+            <source src="assets/video_bg.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <div class="hero-author-tag">
+                <span>MATRIZ CREATIVA DE AUTOR</span>
+                <span>•</span>
+                <span>EDUARDO RAMÍREZ DE CARTAGENA</span>
+            </div>
+
+            <img src="assets/logo KHEM con K transp.png" alt="Símbolo KHEM" class="hero-symbol">
+
+            <h1 class="hero-title-main">KHEM</h1>
+            <div class="hero-clem-primary">DONDE EL ARTE COBRA SENTIDO</div>
+            <div class="hero-clem-secondary">y donde los Sentidos se convierten en Arte</div>
+
+            <div class="hero-actions">
+                <a href="#puertas" class="btn-primary-red">Explorar las Cuatro Casas ↓</a>
+                <a href="https://vimeo.com/1220572442" target="_blank" class="btn-ghost-stone">▶ Ver Showreel Oficial (98s)</a>
             </div>
         </div>
     </section>
 
-    <!-- IDENTIDAD SECTION (3 Columns) -->
-    <section id="identidad" class="identity">
-        <div class="container">
-            <h2 class="section-title">IDENTIDAD</h2>
-            <div class="content-grid three-cols">
-                <!-- COL 1 -->
-                <div class="identity-col">
-                    <div class="col-header">
-                        <span class="col-num">01</span>
-                        <h3>QUÉ ES</h3>
-                    </div>
-                    <p>KHEM es un universo creativo audiovisual donde música e imagen se desarrollan juntas, conviviendo como parte de un mismo legado vital.</p>
-                    <p>No trabaja por formatos fijos. Cada proyecto encuentra su propia forma, inspirada en la experiencia y proyectada hacia el futuro.</p>
-                </div>
+    <!-- 3. LAS CUATRO PUERTAS VISUALES -->
+    <section id="puertas" class="section-doors">
+        <div class="section-head">
+            <span class="section-tag">LOS CUATRO PILARES DEL ECOSISTEMA</span>
+            <h2 class="section-title">Las Cuatro Puertas Sensoriales</h2>
+        </div>
 
-                <!-- COL 2 -->
-                <div class="identity-col">
-                    <div class="col-header">
-                        <span class="col-num">02</span>
-                        <h3>QUÉ HACE</h3>
-                    </div>
-                    <p>Desarrollamos proyectos audiovisuales donde sonido e imagen se construyen de forma conjunta, honrando la historia detrás de cada idea.</p>
-                    <p>Desde canciones y piezas sonoras hasta videoclips y ecosistemas digitales completos.</p>
+        <div class="doors-grid">
+            <!-- 01. SONIDO -->
+            <a href="#casa-sonido" class="door-card door-sonido">
+                <div>
+                    <div class="door-num">PILAR 01</div>
+                    <div class="door-name">El Sonido</div>
+                    <div class="door-sub">The Research Band (TRBand)</div>
+                    <p class="door-desc">2.168 obras sonoras catalogadas, 14 álbumes de estudio producidos y catálogo de sincronización audiovisual con metadatos limpios.</p>
                 </div>
+                <div class="door-cta">Explorar Sonido <span>➔</span></div>
+            </a>
 
-                <!-- COL 3 -->
-                <div class="identity-col">
-                    <div class="col-header">
-                        <span class="col-num">03</span>
-                        <h3>CÓMO TRABAJA</h3>
-                    </div>
-                    <p>Trabaja a partir de ideas y conceptos que marcan el punto de partida. A veces el proceso comienza
-                        con el sonido, otras con una imagen.</p>
-                    <p>Los elementos se desarrollan, se prueban y se ajustan hasta encontrar una forma común.</p>
+            <!-- 02. IMAGEN -->
+            <a href="#casa-imagen" class="door-card door-imagen">
+                <div>
+                    <div class="door-num">PILAR 02</div>
+                    <div class="door-name">La Imagen</div>
+                    <div class="door-sub">Galería Dudeduart & EduArt</div>
+                    <p class="door-desc">601 obras maestras catalogadas, 61 series estilísticas, Colección Magna B2B de gran formato y 9 Cinemagraphs 4K en bucle continuo.</p>
                 </div>
+                <div class="door-cta">Explorar Pintura <span>➔</span></div>
+            </a>
+
+            <!-- 03. PALABRA -->
+            <a href="#casa-palabra" class="door-card door-palabra">
+                <div>
+                    <div class="door-num">PILAR 03</div>
+                    <div class="door-name">La Palabra</div>
+                    <div class="door-sub">Ted Balgram / Ensayo & Narrativa</div>
+                    <p class="door-desc">13 títulos y proyectos literarios: 8 libros publicados en Amazon KDP, ensayos de metodología y la Tesis Doctoral sobre IA musical.</p>
+                </div>
+                <div class="door-cta">Explorar Literatura <span>➔</span></div>
+            </a>
+
+            <!-- 04. VANGUARDIA -->
+            <a href="#casa-vanguardia" class="door-card door-vanguardia">
+                <div>
+                    <div class="door-num">PILAR 04</div>
+                    <div class="door-name">La Vanguardia</div>
+                    <div class="door-sub">Tecnología, Software & Ecosistema Web</div>
+                    <p class="door-desc">6 plataformas web activas desarrolladas in-house, herramientas interactivas de autor y sistemas corporativos de alta fidelidad.</p>
+                </div>
+                <div class="door-cta">Explorar Plataformas <span>➔</span></div>
+            </a>
+        </div>
+    </section>
+
+    <!-- 4. FRANJA DE MAGNITUD -->
+    <section id="magnitud" class="magnitud-bar">
+        <div class="magnitud-grid">
+            <div class="magnitud-item">
+                <div class="magnitud-num">2.168</div>
+                <div class="magnitud-label">Obras Sonoras</div>
+            </div>
+            <div class="magnitud-item">
+                <div class="magnitud-num">601</div>
+                <div class="magnitud-label">Lienzos Catalogados</div>
+            </div>
+            <div class="magnitud-item">
+                <div class="magnitud-num">61</div>
+                <div class="magnitud-label">Series Estilísticas</div>
+            </div>
+            <div class="magnitud-item">
+                <div class="magnitud-num">14</div>
+                <div class="magnitud-label">Álbumes de Estudio</div>
+            </div>
+            <div class="magnitud-item">
+                <div class="magnitud-num">13</div>
+                <div class="magnitud-label">Títulos Literarios</div>
+            </div>
+            <div class="magnitud-item">
+                <div class="magnitud-num">9</div>
+                <div class="magnitud-label">Cinemagraphs 4K</div>
             </div>
         </div>
     </section>
 
-    <!-- LA MATRIZ DE KHEM ( Authority Metrics) -->
-    <section id="matriz" class="matrix-section">
-        <div class="container">
-            <h2 class="section-title">LA MATRIZ DE KHEM</h2>
-            <p class="matrix-intro">El núcleo de datos de un ecosistema en expansión constante. La prueba real de una creatividad sin límites.</p>
-            
-            <div class="matrix-grid">
-                <div class="matrix-item" data-type="images" data-images="assets/obras_proof.png" data-title="Producción Musical (Proof of Work)">
-                    <span class="matrix-num">321</span>
-                    <span class="matrix-label">Obras Musicales</span>
+    <!-- 5. EL MANIFIESTO KHEM -->
+    <section id="manifiesto" class="section-manifiesto">
+        <div class="section-head" style="margin-bottom: 2rem;">
+            <span class="section-tag">FILOSOFÍA DE AUTOR · SENSORY ARTISTIC</span>
+            <h2 class="section-title">El Manifiesto de KHEM</h2>
+        </div>
+
+        <blockquote class="manifiesto-quote">
+            «Música, pintura, pensamiento y tecnología no son territorios independientes: son la manifestación viva de una misma raíz creativa.»
+        </blockquote>
+
+        <p class="manifiesto-text">
+            KHEM nace para articular lo que la fragmentación contemporánea ha separado. Cuando una pincelada responde a la misma tensión armónica que un compás de bajo, y cuando una página reflexiona sobre la misma conmoción visual que un lienzo de gran formato, el arte deja de ser decoración para convertirse en sentido.
+        </p>
+
+        <p class="manifiesto-text">
+            Bajo el concepto <strong>Sensory Artistic</strong>, cada obra es dirigida con rigor artesanal y soberanía autoral completa: desde la composición lírica y musical en el estudio, hasta la textura pictórica en alta definición y el desarrollo del software que la hace visible en el mundo digital.
+        </p>
+
+        <div class="manifiesto-signature">
+            Eduardo Ramírez de Cartagena · Director & Creador
+        </div>
+    </section>
+
+    <!-- 6. SELECCIÓN CURADA: LAS CUATRO CASAS -->
+    <section id="muestrario" class="section-casas">
+        
+        <!-- CASA 1: EL SONIDO -->
+        <div id="casa-sonido" class="casa-block">
+            <div class="casa-header">
+                <div class="casa-header-info">
+                    <h3>01 / La Casa del Sonido</h3>
+                    <p>The Research Band · Catálogo Discográfico Oficial (Distribución Global CD Baby)</p>
                 </div>
-                <div class="matrix-item" data-type="images" data-images="assets/nft_proof_1.png,assets/nft_proof_2.png" data-title="Ecosistema NFT (Proof of Work)">
-                    <span class="matrix-num">21.754</span>
-                    <span class="matrix-label">Activos NFT</span>
+                <a href="https://trbandmusic.es" target="_blank" class="casa-btn-link">Visitar TRBANDMUSIC.ES ➔</a>
+            </div>
+
+            <!-- Los 5 Álbumes de Estudio Oficiales -->
+            <div class="showcase-grid-5">
+                <div class="showcase-item">
+                    <img src="assets/portada_tao.jpg" alt="A Journey of a Thousand Miles Begins with a Single Step" class="showcase-thumb-album">
+                    <div class="showcase-info">
+                        <span class="showcase-tag">ÁLBUM ESTÁNDAR</span>
+                        <div class="showcase-title">《千里之行 始于足下 — Tao》</div>
+                        <div class="showcase-meta">A Journey of a Thousand Miles Begins with a Single Step.</div>
+                    </div>
                 </div>
-                <div class="matrix-item" data-type="images" data-images="assets/painting_proof_1.jpg,assets/painting_proof_2.jpg" data-title="Estilos de Pintura REALES (Dudeduart)">
-                    <span class="matrix-num">37</span>
-                    <span class="matrix-label">Estilos de Pintura</span>
+
+                <div class="showcase-item">
+                    <img src="assets/portada_cut_the_roll_jazzrock.jpg" alt="Cut the Roll and Jazzrock" class="showcase-thumb-album">
+                    <div class="showcase-info">
+                        <span class="showcase-tag">ÁLBUM ESTÁNDAR</span>
+                        <div class="showcase-title">Cut the Roll and Jazzrock</div>
+                        <div class="showcase-meta">Jazz-Rock & Fusión progresiva instrumental.</div>
+                    </div>
                 </div>
-                <div class="matrix-item" data-type="links" data-title="Explorar Portales Web">
-                    <span class="matrix-num">5</span>
-                    <span class="matrix-label">Portales Web</span>
+
+                <div class="showcase-item">
+                    <img src="assets/portada_fuga.jpg" alt="Fuga (2026 Versions)" class="showcase-thumb-album">
+                    <div class="showcase-info">
+                        <span class="showcase-tag">ÁLBUM ESTÁNDAR</span>
+                        <div class="showcase-title">Fuga (2026 Versions)</div>
+                        <div class="showcase-meta">2026 Versions · In memoriam of Pepe and Lola.</div>
+                    </div>
                 </div>
-                <div class="matrix-item" data-type="images" data-images="assets/salud_proof.png,assets/mimo_proof.jpg,assets/mastering_proof_final.png" data-title="Apps y Desarrollo (Proof of Work)">
-                    <span class="matrix-num">13</span>
-                    <span class="matrix-label">Apps y Proyectos</span>
+
+                <div class="showcase-item">
+                    <img src="assets/portada_one_thousand_color_notes.png" alt="One Thousand of Color Notes" class="showcase-thumb-album">
+                    <div class="showcase-info">
+                        <span class="showcase-tag">ÁLBUM ESTÁNDAR</span>
+                        <div class="showcase-title">One Thousand of Color Notes</div>
+                        <div class="showcase-meta">Composiciones melódicas y atmósferas envolventes.</div>
+                    </div>
                 </div>
+
+                <div class="showcase-item">
+                    <img src="assets/portada_acrobatic_life.jpg" alt="Acrobatic Life" class="showcase-thumb-album">
+                    <div class="showcase-info">
+                        <span class="showcase-tag">ÁLBUM PRO · JULIO 2018</span>
+                        <div class="showcase-title">Acrobatic Life</div>
+                        <div class="showcase-meta">Producción de alta precisión rítmica y concepto de autor.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tira de Singles Oficiales -->
+            <div class="singles-strip">
+                <span class="singles-label">Singles Oficiales del Catálogo:</span>
+                <span class="single-pill">Esto Que Tú Me Das</span>
+                <span class="single-pill">Meanwhile I Love You</span>
+                <span class="single-pill">Nuestra Voluntad</span>
+                <span class="single-pill">Sueños en París</span>
+                <span class="single-pill">Wild and Free</span>
+            </div>
+        </div>
+
+        <!-- CASA 2: LA IMAGEN -->
+        <div id="casa-imagen" class="casa-block">
+            <div class="casa-header">
+                <div class="casa-header-info">
+                    <h3>02 / La Casa de la Imagen</h3>
+                    <p>Galería Dudeduart · 601 Obras, 61 Familias Estilísticas & 9 Cinemagraphs 4K</p>
+                </div>
+                <a href="https://dudeduart.es" target="_blank" class="casa-btn-link">Visitar Galería DUDEDUART.ES ➔</a>
+            </div>
+
+            <div class="showcase-grid-3">
+                <div class="showcase-item">
+                    <img src="assets/danza_de_color.jpg" alt="Danza de Color · Colección Magna B2B" class="showcase-thumb-art">
+                    <div class="showcase-info">
+                        <span class="showcase-tag">COLECCIÓN MAGNA B2B</span>
+                        <div class="showcase-title">Gran Formato para Arquitectura</div>
+                        <div class="showcase-meta">31 obras exclusivas seleccionadas para espacios corporativos e interiorismo de lujo.</div>
+                    </div>
+                </div>
+
+                <div class="showcase-item">
+                    <img src="assets/whale_midj.png" alt="Canto de Ballena · Cinemagraphs 4K" class="showcase-thumb-art">
+                    <div class="showcase-info">
+                        <span class="showcase-tag">ARTE EN MOVIMIENTO</span>
+                        <div class="showcase-title">Cinemagraphs 4K en Bucle</div>
+                        <div class="showcase-meta">9 producciones de cuadros vivos continuos diseñados para pantallas de hotel y galerías.</div>
+                    </div>
+                </div>
+
+                <div class="showcase-item">
+                    <img src="assets/Portada Generica ARTE.jpg" alt="61 Familias Estilísticas" class="showcase-thumb-art">
+                    <div class="showcase-info">
+                        <span class="showcase-tag">INVESTIGACIÓN MATÉRICA</span>
+                        <div class="showcase-title">61 Familias Estilísticas</div>
+                        <div class="showcase-meta">Óleos, Materdigisse, Cubesse, NeoInk, Espatac, Borácarb e Impastus.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CASA 3: LA PALABRA -->
+        <div id="casa-palabra" class="casa-block">
+            <div class="casa-header">
+                <div class="casa-header-info">
+                    <h3>03 / La Casa de la Palabra</h3>
+                    <p>Ted Balgram · 13 Títulos Literarios, Ensayo y Tesis Doctoral</p>
+                </div>
+            </div>
+
+            <div class="showcase-grid-3">
+                <div class="showcase-item">
+                    <div class="book-action-bar">
+                        <a href="https://www.amazon.es/dp/B0HH8R6H2Q" target="_blank" class="book-action-btn">Ir a Amazon ➔</a>
+                    </div>
+                    <a href="https://www.amazon.es/dp/B0HH8R6H2Q" target="_blank" style="display:block;">
+                        <img src="assets/portada_la_manipulacion.jpg" alt="La Manipulación" class="showcase-thumb-book">
+                    </a>
+                    <div class="showcase-info">
+                        <span class="showcase-tag">OBRA INSIGNIA</span>
+                        <div class="showcase-title">La Manipulación: La versión que falta</div>
+                        <div class="showcase-meta">47 capítulos de filosofía social y psicología cognitiva. Edición Tapa Dura y Kindle.</div>
+                    </div>
+                </div>
+
+                <div class="showcase-item">
+                    <div class="book-action-bar">
+                        <a href="https://www.amazon.es/dp/B0GYSCBLM7" target="_blank" class="book-action-btn">Ir a Amazon ➔</a>
+                    </div>
+                    <a href="https://www.amazon.es/dp/B0GYSCBLM7" target="_blank" style="display:block;">
+                        <img src="assets/portada METODO.png" alt="Método de Dirección Creativa" class="showcase-thumb-book">
+                    </a>
+                    <div class="showcase-info">
+                        <span class="showcase-tag">ENSAYO DE METODOLOGÍA</span>
+                        <div class="showcase-title">Método de Dirección Creativa</div>
+                        <div class="showcase-meta">Compendio sobre minimalismo mineral, diseño premium y dirección de autor.</div>
+                    </div>
+                </div>
+
+                <div class="showcase-item">
+                    <div class="book-action-bar">
+                        <a href="https://www.amazon.es/dp/B0GHZS9LFY" target="_blank" class="book-action-btn">Ir a Amazon ➔</a>
+                    </div>
+                    <a href="https://www.amazon.es/dp/B0GHZS9LFY" target="_blank" style="display:block;">
+                        <img src="assets/portada_chokititos.png" alt="Choquitito" class="showcase-thumb-book">
+                    </a>
+                    <div class="showcase-info">
+                        <span class="showcase-tag">VALORES ÉTICOS</span>
+                        <div class="showcase-title">Choquitito (El Libro de la Dulzura)</div>
+                        <div class="showcase-meta">Testamento lírico disponible en papel, Kindle y edición web interactiva Flipbook.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CASA 4: LA VANGUARDIA -->
+        <div id="casa-vanguardia" class="casa-block">
+            <div class="casa-header">
+                <div class="casa-header-info">
+                    <h3>04 / La Casa de la Vanguardia</h3>
+                    <p>Ecosistema de Plataformas Web y Software Propio</p>
+                </div>
+                <a href="#contacto" class="casa-btn-link">Solicitar Dossier B2B ➔</a>
+            </div>
+
+            <div class="showcase-grid-3">
+                <div class="showcase-item">
+                    <img src="assets/portales_autor_oficial.jpg" alt="Portales de Autor & Clientes" class="showcase-thumb">
+                    <div class="showcase-info">
+                        <span class="showcase-tag">6 PLATAFORMAS WEB ACTIVAS</span>
+                        <div class="showcase-title">Portales de Autor & Clientes</div>
+                        <div class="showcase-meta">trbandmusic.es, dudeduart.es, Turismo España, JJ Almela Web y La Mesa de Sal y Olivo.</div>
+                    </div>
+                </div>
+
+                <div class="showcase-item">
+                    <img src="assets/estudios_interactivos.jpg" alt="Estudios Interactivos In-House" class="showcase-thumb">
+                    <div class="showcase-info">
+                        <span class="showcase-tag">HERRAMIENTAS EN NAVEGADOR</span>
+                        <div class="showcase-title">Estudios Interactivos In-House</div>
+                        <div class="showcase-meta">Interactive Flipbook Maker, Chord Player, Web Mastering Studio y Probador 3D.</div>
+                    </div>
+                </div>
+
+                <div class="showcase-item">
+                    <img src="assets/sistemas_b2b_corporativos.jpg" alt="Sistemas B2B Corporativos" class="showcase-thumb">
+                    <div class="showcase-info">
+                        <span class="showcase-tag">SISTEMAS B2B CORPORATIVOS</span>
+                        <div class="showcase-title">Soluciones de Alto Impacto</div>
+                        <div class="showcase-meta">Dossiers ejecutivos, tarjetas 3D y herramientas de catalogación para inversión.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- 7. CONTACTO DIRECTO -->
+    <section id="contacto" class="section-contacto">
+        <div class="contacto-box">
+            <h2 class="contacto-title">Despacho de Autor</h2>
+            <p class="contacto-sub">Atención directa sin intermediarios para galerías de arte, supervisores musicales, editoriales y clientes corporativos.</p>
+
+            <a href="mailto:contacto@khemcreative.es" class="contacto-email">contacto@khemcreative.es</a>
+
+            <div style="color: var(--text-stone); font-size: 0.85rem; line-height: 1.8;">
+                Eduardo Ramírez de Cartagena<br>
+                Director Creativo & Productor Fonográfico<br>
+                SGAE Socio Oficial Nº 29.751 · Derechos 100% One-Stop
             </div>
         </div>
     </section>
 
-    <!-- PROCESOS SECTION (Merged from Proyectos) -->
-    <section id="procesos" class="process-section">
-        <div class="container">
-            <h2 class="section-title">PROYECTOS</h2>
-            <div class="process-steps">
-                <p
-                    style="text-align: center; color: #fff; margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto;">
-                    Los proyectos en KHEM se desarrollan a través de un proceso estructurado, flexible y coherente,
-                    donde la improvisación, la casualidad y distintos marcos mentales son fundamentales, y donde sonido
-                    e imagen convergen en el arte final.
-                </p>
-
-                <div class="step">
-                    <h3>Preproducción</h3>
-                    <p>En esta fase se define un punto de partida, no un resultado cerrado.</p>
-                </div>
-
-                <div class="step">
-                    <h3>Arreglos y edición</h3>
-                    <p>En esta etapa, los elementos comienzan a tomar forma y también a transformarse.</p>
-                </div>
-
-                <div class="step">
-                    <h3>Producción y arte final</h3>
-                    <p>En la fase final, todos los elementos se integran. El sonido y la imagen encuentran su forma
-                        definitiva.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROJECT DETAIL: THE BOY (Merged from Proyectos) -->
-    <section class="project-detail">
-        <div class="container">
-            <div class="project-header">
-                <h2 class="section-title" data-text="KHEM PROYECTO">PROYECTO DESTACADO</h2>
-                <h1 class="project-title">THE BOY OF MERRY CHRISTMAS FEEL SONG</h1>
-                <p class="project-subtitle">“NO LO VAS A CREER: Los sueños de un niño que van a cambiarlo todo…”</p>
-            </div>
-
-            <div class="project-content">
-                <div class="project-text">
-                    <h4>Introducción</h4>
-                    <p>Este proyecto se presenta como un videoclip musical que combina narrativa visual y canción
-                        original para construir una historia emocional ligada a la infancia, los sueños y el cambio.</p>
-
-                    <h4>La Música</h4>
-                    <p>La canción es una pieza pop moderna navideña, cantada en inglés, con un enfoque actual y
-                        emocional.</p>
-
-                    <h4>El Proceso</h4>
-                    <p>Construido íntegramente con imágenes generadas por IA, basadas en fotografías creadas previamente
-                        bajo la premisa de un guión narrativo definido.</p>
-
-                    <div class="project-meta">
-                        <p><strong>Formato:</strong> Videoclip | <strong>Audio:</strong> Canción original</p>
-                    </div>
-                </div>
-
-                <div class="project-media">
-                    <style>
-                        @keyframes vidglass-float {
-                            0% {
-                                transform: translateY(0);
-                            }
-
-                            50% {
-                                transform: translateY(-10px);
-                            }
-
-                            100% {
-                                transform: translateY(0);
-                            }
-                        }
-                    </style>
-                    <!-- VidGlass - Local Video 1 (The Boy) -->
-                    <div
-                        style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 24px; padding: 20px; box-shadow: 0 8px 32px rgba(0,0,0,0.3); overflow: hidden; width: 100%; margin: 0 auto; animation: vidglass-float 6s ease-in-out infinite;">
-                        <video controls poster="assets/CLEM musica.png"
-                            style="width: 100%; border-radius: 12px; display: block; filter: brightness(1.1);">
-                            <source src="assets/The_Boy_of_Merry_Christmas.mp4" type="video/mp4">
-                            Tu navegador no soporta el tag de video.
-                        </video>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROYECTO SEGUNDO: NUEVO LANZAMIENTO -->
-    <section class="project-detail" style="background: #050505; border-top: 1px solid #111; padding-top: 40px;">
-        <div class="container">
-            <div class="project-content" style="flex-direction: row-reverse;">
-                <div class="project-text">
-                    <h4>Nueva Experimentación</h4>
-                    <p>VidGlass Edition: Un nuevo paso en la visualización creativa de KHEM.</p>
-                </div>
-
-                <div class="project-media" style="background: transparent; border: none; padding: 0;">
-                    <div class="video-container"
-                        style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 24px; padding: 20px; box-shadow: 0 8px 32px rgba(0,0,0,0.3); overflow: hidden; width: 100%; margin: 0 auto; animation: vidglass-float 6s ease-in-out infinite; animation-delay: 3s;">
-                        <video controls poster="assets/CLEM musica.png"
-                            style="width: 100%; border-radius: 12px; display: block; filter: brightness(1.1);">
-                            <source src="assets/The_Boy_of_Merry_Christmas.mp4" type="video/mp4">
-                            Tu navegador no soporta el tag de video.
-                        </video>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- LITERATURA SECTION (Merged from Proyectos) -->
-    <section id="literatura" class="project-detail" style="background: #080808; border-top: 1px solid #111;">
-        <div class="container">
-            <div class="project-header">
-                <h1 class="project-title">LIBROS Y NARRATIVA</h1>
-                <p class="project-subtitle">Historias que se leen, se tocan y se imaginan.</p>
-            </div>
-
-            <div class="project-content">
-                <div class="project-text">
-                    <h4>El Enfoque</h4>
-                    <p>En KHEM, la palabra escrita es otra forma de sonido. Desarrollamos libros, novelas y guiones
-                        donde el texto cobra vida propia.</p>
-                    <ul class="step-list" style="margin-top: 1rem;">
-                        <li><strong>CHOKITITOS:</strong> Un regalo intemporal.</li>
-                        <li><strong>Novela:</strong> Narrativa de largo formato (En desarrollo).</li>
-                    </ul>
-                </div>
-
-                <div class="project-media" style="background: transparent; border: none; padding: 0;">
-                    <!-- Card for CHOKITITOS -->
-                    <article class="card"
-                        style="width: 100%; max-width: 400px; margin: 0 auto; cursor: pointer; border: 1px solid var(--gold-dim);"
-                        onclick="window.location.href='libros/chokititos/index.html'">
-                        <div class="card-image"
-                            style="height: 400px; background: url('libros/chokititos/assets/fondo.png'); background-size: cover; position: relative;">
-                            <div
-                                style="position: absolute; bottom: 0; left: 0; width: 100%; background: linear-gradient(to top, rgba(0,0,0,0.95), transparent); padding: 2rem 1rem; text-align: center;">
-                                <h3
-                                    style="color: var(--gold); font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 0.5rem; letter-spacing: 0.1em;">
-                                    CHOKITITOS</h3>
-                                <p
-                                    style="color: #fff; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.2em;">
-                                    Leer Libro Interactivo &rarr;</p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SHOWCASE SECTION (Cards) -->
-    <section id="artefactos" class="showcase">
-        <div class="container">
-            <h2 class="section-title">ARTEFACTOS</h2>
-            <div class="cards-grid">
-                <!-- CLEM -->
-                <article class="card">
-                    <div class="card-image">
-                        <img src="assets/CLEM musica.png" alt="CLEM">
-                    </div>
-                    <div class="card-info">
-                        <h3>CLEM</h3>
-                        <p>La voz visual. Resonancia pura.</p>
-                    </div>
-                </article>
-
-                <!-- GESTO -->
-                <article class="card">
-                    <div class="card-image">
-                        <img src="assets/KHEM_LOGOgesto_definitivo.png" alt="Gesto">
-                    </div>
-                    <div class="card-info">
-                        <h3>EL GESTO</h3>
-                        <p>La marca de la creación.</p>
-                    </div>
-                </article>
-
-                <!-- KHEM -->
-                <article class="card">
-                    <div class="card-image">
-                        <img src="assets/Portada logo KHEM vinilo.png" alt="Vinilo KHEM">
-                    </div>
-                    <div class="card-info">
-                        <h3>LA OBRA</h3>
-                        <p>Producción de alta fidelidad.</p>
-                    </div>
-                </article>
-
-                <!-- FURSONA GENESIS BANNER -->
-                <a href="fursona-genesis.html" class="banner-wide">
-                    <div class="banner-overlay"></div>
-                    <div class="banner-content">
-                        <h3>FURSONA GENESIS</h3>
-                        <p>MÁS DE 21,590 AVATARES ÚNICOS · POLYGON BLOCKCHAIN</p>
-                        <span
-                            style="display: inline-block; margin-top: 15px; color: var(--gold); text-decoration: none; font-size: 0.8rem; letter-spacing: 2px; border-bottom: 1px solid var(--gold-dim); padding-bottom: 5px; text-transform: uppercase;">VER
-                            COLECCIÓN COMPLETA</span>
-                    </div>
-                </a>
-
-
-                <!-- QUANTUM DEITIES BANNER -->
-                <a href="quantum-deities.html" class="banner-wide"
-                    style="margin-top: 20px; background-image: url('assets/quantum-deities-portada.png'); border: 1px solid #00f2ff;">
-                    <div class="banner-overlay" style="background: rgba(0,0,0,0.6);"></div>
-                    <div class="banner-content">
-                        <h3 style="color: #00f2ff;">QUANTUM DEITIES</h3>
-                        <p>164 AVATARES ÚNICOS · DIVINIDADES DIGITALES</p>
-                        <span
-                            style="display: inline-block; margin-top: 15px; color: #00f2ff; text-decoration: none; font-size: 0.8rem; letter-spacing: 2px; border-bottom: 1px solid #00f2ff; padding-bottom: 5px; text-transform: uppercase;">VER
-                            DETALLES Y MUESTRAS</span>
-                    </div>
-                </a>
-
-                <!-- VORTEX 1.0 BANNER (RECOVERY) -->
-                <a href="https://vortex-1-0.nfts2.me/" target="_blank" class="banner-wide"
-                    style="margin-top: 20px; background-image: url('assets/vortex-portada.jpg'); border: 1px solid #ff007f;">
-                    <div class="banner-overlay" style="background: rgba(0,0,0,0.6);"></div>
-                    <div class="banner-content">
-                        <h3 style="color: #ff007f;">VORTEX 1.0</h3>
-                        <p>175 OBRAS MAESTRAS · DEIDADES CUÁNTICAS</p>
-                        <span
-                            style="display: inline-block; margin-top: 15px; color: #ff007f; text-decoration: none; font-size: 0.8rem; letter-spacing: 2px; border-bottom: 1px solid #ff007f; padding-bottom: 5px; text-transform: uppercase;">MINTEAR EN NFT2ME &rarr;</span>
-                    </div>
-                </a>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contacto" class="contact">
-        <div class="container">
-            <h2 class="section-title">CONTACTO</h2>
-            <div class="contact-wrapper">
-                <p class="contact-intro">Para iniciar una conversación sobre un nuevo proyecto o universo.</p>
-                <form class="contact-form" action="#" method="POST">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="NOMBRE" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="EMAIL" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" rows="5" placeholder="MENSAJE" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">ENVIAR TRANSMISIÓN</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- CIERRE CONCEPTUAL Y FOOTER -->
-    <footer class="site-footer" style="padding: 5rem 2rem; background: #050505; border-top: 1px solid #111; text-align: center;">
-        <div class="container">
-            <p class="closure-text" style="font-size: 1.1rem; color: #888; margin-bottom: 3rem; font-family: var(--font-heading); letter-spacing: 0.1em; line-height: 2;">
-                KHEM · EL NÚCLEO CEREBRO<br>
-                La plataforma matriz donde convergen imagen, creatividad y diseño bajo la autoridad de un legado vivo.<br>
-                Aquí, cada neurona digital está al servicio de la idea.
-            </p>
-            
-            <div style="margin-bottom: 3rem;">
-                <a href="https://www.behance.net/gallery/245145157/Quantum-Deities-AI-Cyber-Gods-%28Vortex-10%29"
-                   target="_blank"
-                   style="color: var(--gold); border: 1px solid var(--gold); padding: 10px 25px; text-decoration: none; border-radius: 30px; font-weight: bold; font-family: var(--font-heading); letter-spacing: 1px; transition: all 0.3s;"
-                   onmouseover="this.style.background='var(--gold)'; this.style.color='#000';"
-                   onmouseout="this.style.background='transparent'; this.style.color='var(--gold)';">
-                    🎨 Visita mi Portfolio en Behance
-                </a>
-            </div>
-
-            <div class="footer-bottom" style="color: #666; font-size: 0.85rem; border-top: 1px solid #111; padding-top: 2rem;">
-                <p>&copy; e.ramirez 2026. Todos los derechos reservados. | PRODUCED BY <a href="https://khem.es" style="color: #999; text-decoration: none; font-weight: bold;">KHEM</a></p>
-                <div style="margin-top: 1rem;">
-                    <a href="condiciones.html" style="color: #666; text-decoration: underline;">Términos y Condiciones</a>
-                </div>
-            </div>
-        </div>
+    <!-- 8. PIE DE PÁGINA OFICIAL -->
+    <footer style="text-align: center; padding: 50px 20px 100px 20px; border-top: 1px solid var(--border-subtle); color: var(--text-stone); font-size: 0.88rem; letter-spacing: 0.02em;">
+        <p style="margin: 0; line-height: 1.8;">
+            &copy; 2026 · Web creada por <strong style="color: var(--text-bone); font-weight: 600;">Eduardo Ramírez de Cartagena</strong> para <span style="color: var(--accent-gold); font-weight: 600;">Khem Aura Creative</span>. Todos los derechos reservados.
+        </p>
     </footer>
 
-    <!-- MODAL PARA VERACIDAD (MATRIZ) -->
-    <div id="matrix-modal" class="modal">
-        <span class="modal-close">&times;</span>
-        <div class="modal-content">
-            <h3 id="modal-title"></h3>
-            <!-- El contenido se inyecta dinámicamente por JS -->
-        </div>
-    </div>
-
-    <script src="js/main.js?v=1.4"></script>
 </body>
-
 </html>
